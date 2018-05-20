@@ -1,0 +1,16 @@
+# Customize
+
+light.fibaro_system_fgd212_dimmer_2_level
+  hidden: true
+light.fibaro_system_fgd212_dimmer_2_level_2
+  hidden: true
+light.fibaro_system_fgd212_dimmer_2_level_3
+  hidden: true
+light.level
+  friendly_name: Bathroom
+light.level_2
+  hidden: true
+light.level_3
+  friendly_name: Izzy
+light.level_4
+  friendly_name: Lounge
