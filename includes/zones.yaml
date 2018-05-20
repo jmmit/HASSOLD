@@ -21,5 +21,5 @@
 - name: Wales
   latitude: !secret mum_lat
   longitude: !secret mum_lon
-  readius: 50000
+  radius: 50000
   icon: mdi:home-map-marker
