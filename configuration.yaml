@@ -51,16 +51,16 @@ updater:
   include_used_components: true
 conversation:
 
-#group: !include_dir_merge_named includes/groups/
+group: !include_dir_merge_named includes/groups/
 device_tracker: !include includes/device_tracker.yaml
 notify: !include_dir_merge_named includes/notify/
 #switch: !include_dir_merge_named includes/switchs/
 #sensor: !include_dir_merge_named includes/sensors/
-#automation: !include_dir_merge_named includes/automations/
+automation: !include_dir_merge_named includes/automations/
 #script: !include_dir_merge_named includes/scripts/
 zone: !include includes/zones.yaml
-#input_boolean: !include includes/booleans.yaml
-#media_player: !include includes/mediaplayer.yaml
+input_boolean: !include includes/booleans.yaml
+media_player: !include includes/mediaplayer.yaml
 #remote: !include includes/remotes.yaml
 #camera: !include includes/cameras.yaml
 #shell_commands: !include_dir_merge_named scripts/shell/
