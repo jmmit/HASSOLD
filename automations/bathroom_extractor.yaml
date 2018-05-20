@@ -4,7 +4,7 @@
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: light.bathroomlight_level
+    entity_id: light.level
     from: 'off'
     to: 'on'
     for:
@@ -16,17 +16,17 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.extractorfan_switch
+        entity_id: switch.switch_2
 
 - alias: Turn boolean off when light turns on
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: light.bathroomlight_level
+    entity_id: light.level
     from: 'off'
     to: 'on'
   - platform: state
-    entity_id: switch.extractorfan_switch
+    entity_id: switch.switch_2
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.extractor_fan
@@ -35,7 +35,7 @@
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: switch.extractorfan_switch
+    entity_id: switch.switch_2
     from: 'on'
     to: 'off'
   action:
@@ -46,7 +46,7 @@
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: light.bathroomlight_level
+    entity_id: light.level
     from: 'on'
     to: 'off'
   condition:
@@ -56,13 +56,13 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: switch.extractorfan_switch
+        entity_id: switch.switch_2
         
 - alias: Stop fan coming on if under 5 min
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: light.bathroomlight_level
+    entity_id: light.level
     from: 'off'
     to: 'on'
     for:
@@ -75,7 +75,7 @@
   hide_entity: True
   trigger:
   - platform: state
-    entity_id: switch.extractorfan_switch
+    entity_id: switch.switch_2
     from: 'off'
     to: 'on'
     for:
@@ -83,16 +83,16 @@
   action:
     service: switch.turn_off
     data:
-      entity_id: switch.extractorfan_switch
+      entity_id: switch.switch_2
       
 - alias: Turn fan off with light
   trigger:
   - platform: state
-    entity_id: light.bathroomlight_level
+    entity_id: light.level
     from: 'on'
     to: 'off'
   action:
     service: switch.turn_off
-    entity_id: switch.extractorfan_switch
+    entity_id: switch.switch_2
 
 
