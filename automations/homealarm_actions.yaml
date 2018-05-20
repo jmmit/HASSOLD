@@ -10,7 +10,7 @@
       to: 'not_home'
   action:
     - service: alarm_control_panel.alarm_arm_away
-      entity_id: alarm_control_panel.home
+      entity_id: alarm_control_panel.home_alarm
       data:
         code: !secret alarm_code
     - service: notify.PBMax
@@ -21,15 +21,14 @@
       data:
         title: House Alarm
         message: The alarm has been armed
-    - service: climate.set_hold_mode
+    - service: climate.set_temperature
       data:
-        entity_id: climate.livingroomheater_heating_1
-        hold_mode: 'away'
-    - service: climate.set_hold_mode
+        entity_id: climate.danfoss_devolo_home_control_radiator_thermostat_heating_1_2
+        temperature: 4
+    - service: climate.set_temperature
       data:
-        entity_id: climate.izzyheater_heating_1
-        hold_mode: 'away'
-#    - service: shell_command.alarmpanelarm
+        entity_id: climate.danfoss_devolo_home_control_radiator_thermostat_heating_1
+        temperature: 4
 
 - id: DisarmAlarm
   alias: 'Disarm Alarm at home'
@@ -41,7 +40,7 @@
       to: 'home'
   action:
     - service: alarm_control_panel.alarm_disarm
-      entity_id: alarm_control_panel.home
+      entity_id: alarm_control_panel.home_alarm
       data:
         code: !secret alarm_code
     - service: notify.PBMax
@@ -52,11 +51,11 @@
       data:
         title: House Alarm
         message: The alarm has been disarmed
-    - service: climate.set_hold_mode
+    - service: climate.set_temperature
       data:
-        entity_id: climate.livingroomheater_heating_1
-        hold_mode: 'home'
-    - service: climate.set_hold_mode
+        entity_id: climate.danfoss_devolo_home_control_radiator_thermostat_heating_1_2
+        temperature: 21
+    - service: climate.set_temperature
       data:
-        entityid: climate.izzyheater_heating_1
-        hold_mode: 'home'
+        entity_id: climate.danfoss_devolo_home_control_radiator_thermostat_heating_1
+        temperature: 21
