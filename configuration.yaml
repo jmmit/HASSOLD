@@ -51,7 +51,7 @@ updater:
   include_used_components: true
 conversation:
 
-group: !include_dir_merge_named includes/groups/
+group: !include_dir_merge_list includes/groups/
 device_tracker: !include includes/device_tracker.yaml
 notify: !include_dir_merge_named includes/notify/
 #switch: !include_dir_merge_named includes/switchs/
