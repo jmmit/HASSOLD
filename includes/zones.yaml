@@ -1,0 +1,25 @@
+#Zones File
+
+- name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  radius: 30
+  icon: mdi:home
+   
+- name: !secret mwork
+  latitude: !secret mwork_lat
+  longitude: !secret mwork_lon
+  radius: 350
+  icon: mdi:school
+
+- name: !secret swork
+  latitude: !secret swork_lat
+  longitude: !secret swork_lon
+  radius: 65
+  icon: mdi:shopping
+
+- name: Wales
+  latitude: !secret mum_lat
+  lonitude: !secret mum_lon
+  readius: 50000
+  icon: mdi:home-map-marker
