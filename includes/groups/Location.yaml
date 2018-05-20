@@ -7,7 +7,7 @@
      - sensor.to_home_max
      - sensor.to_home_sophie
      - sensor.to_work
-     - group.people
+     - group.peoplee
 
 People:
    view: no
