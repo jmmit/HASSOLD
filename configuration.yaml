@@ -7,11 +7,11 @@ homeassistant:
   unit_system: metric
   time_zone: !secret time_zone
   #customize: !include_dir_merge_named includes/customize/
-#panel_iframe:
-#  configurator:
-#    title: Configurator
-#    icon: mdi:wrench
-#    url: !secret config_url
+panel_iframe:
+  configurator:
+  title: Configurator
+    icon: mdi:wrench
+    url: !secret config_url
 history:
   exclude:
     domains:
@@ -67,10 +67,10 @@ conversation:
 
 weather:
 
-#mqtt:
-#  broker: 192.168.1.250
-#  username: !secret mqttt_user
-#  password: !secret api_password
+mqtt:
+  broker: 192.168.1.250
+  username: !secret mqttt_user
+  password: !secret api_password
 
 tts:
   - platform: google
@@ -84,28 +84,29 @@ zwave:
 #  - platform: owntracks
 #    max_gps_accuracy: 50
     
-#nest:
-#  client_id: !secret nest_id
-#  client_secret: !secret nest_secret
-#  sensors:
-#    monitored_conditions:
-#      - co_status
-#      - smoke_status
-#      - battery_health
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+  sensors:
+    monitored_conditions:
+      - co_status
+      - co_status
+      - smoke_status
+      - battery_health
 
-#ifttt:
-#  key: !secret ifttt_key
+ifttt:
+  key: !secret ifttt_key
 
-#alarm_control_panel:
-#  - platform: manual_mqtt
-#    name: Home_Alarm
-#    code: !secret alarm_code
-#    pending_time: 20
-#    trigger_time: 15
-#    state_topic: home/alarm
-#    command_topic: home/alarm/set
-#    armed_home:
-#      pending_time: 0
+alarm_control_panel:
+  - platform: manual_mqtt
+    name: Home_Alarm
+    code: !secret alarm_code
+    pending_time: 20
+    trigger_time: 15
+    state_topic: home/alarm
+    command_topic: home/alarm/set
+    armed_home:
+      pending_time: 0
 
 cloud:
 
