@@ -77,7 +77,8 @@ zwave:
 device_tracker:
   - platform: owntracks
     max_gps_accuracy: 50
-  - platform: nmap
+  - platform: nmap_tracker
+    track_new_devices: false
     hosts: 192.168.1.0/24
     home_interval: 60
     exclude:
