@@ -20,6 +20,7 @@ history:
       - zone
       - zwave
       - media_player
+map:
 sun:
 config:
 frontend:
@@ -42,7 +43,7 @@ recorder:
       - automation
       - updater
       - zone
-#      - zwave
+      - zwave
       - media_player
 logger:
   default: error
@@ -51,13 +52,13 @@ updater:
 conversation:
 
 #group: !include_dir_merge_named includes/groups/
-#device_tracker: !include includes/device_tracker.yaml
-#notify: !include_dir_merge_named includes/notify/
+device_tracker: !include includes/device_tracker.yaml
+notify: !include_dir_merge_named includes/notify/
 #switch: !include_dir_merge_named includes/switchs/
 #sensor: !include_dir_merge_named includes/sensors/
 #automation: !include_dir_merge_named includes/automations/
 #script: !include_dir_merge_named includes/scripts/
-#zone: !include includes/zones.yaml
+zone: !include includes/zones.yaml
 #input_boolean: !include includes/booleans.yaml
 #media_player: !include includes/mediaplayer.yaml
 #remote: !include includes/remotes.yaml
