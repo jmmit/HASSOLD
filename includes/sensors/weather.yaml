@@ -1,0 +1,16 @@
+# Weather
+
+- platform: darksky
+  api_key: !secret darksky
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - wind_speed
+    - wind_bearing
+    - hourly_summary
+    - precip_intensity_max
+
+- platform: yr
