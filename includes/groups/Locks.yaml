@@ -1,0 +1,7 @@
+# Locks
+
+Locks:
+  view: yes
+  icon: mdi:lock
+  entities:
+    - group.all_locks
