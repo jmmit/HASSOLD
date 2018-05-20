@@ -42,7 +42,7 @@ recorder:
       - automation
       - updater
       - zone
-      - zwave
+#      - zwave
       - media_player
 logger:
   default: error
