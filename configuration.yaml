@@ -78,6 +78,11 @@ zwave:
 device_tracker:
   - platform: owntracks
     max_gps_accuracy: 50
+  - platform: nmap
+    hosts: 192.168.1.0/24
+    home_interval: 60
+    exclude:
+      - 192.168.1.250
     
 nest:
   client_id: !secret nest_id
