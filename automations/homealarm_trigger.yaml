@@ -5,19 +5,15 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: light.livingroomlight_level
+      entity_id: light.level
       from: 'off'
       to: 'on'
     - platform: state
-      entity_id: light.hallwaylight_level
+      entity_id: light.level_3
       from: 'off'
       to: 'on'
     - platform: state
-      entity_id: light.dinningroomlight_level
-      from: 'off'
-      to: 'on'
-    - platform: state
-      entity_id: light.kitchenlight_level
+      entity_id: lightlevel_4
       from: 'off'
       to: 'on'
   condition:
