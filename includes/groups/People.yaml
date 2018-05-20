@@ -1,0 +1,5 @@
+People:
+  view: no
+  entities:
+    - device_tracker.homeassistant_sc
+    - decice_tracker. homeassistant_mc
