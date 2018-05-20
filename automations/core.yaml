@@ -1,0 +1,14 @@
+# Core Automations relating to HASS
+
+- id: HASS_Startup
+  alias: HASS Startup
+  initial_state: True
+  hide_entity: True
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+    service: notify.PBMax
+    data:
+      title: HASSIO
+      message: Home Assistant has finished booting!
