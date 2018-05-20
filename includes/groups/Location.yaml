@@ -8,3 +8,9 @@
      - sensor.to_home_sophie
      - sensor.to_work
      - group.people
+
+People:
+   view: no
+   entities:
+     - device_tracker.homeassistant_sc
+     - device_tracker.homeassistant_mc
