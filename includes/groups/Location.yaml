@@ -1,0 +1,10 @@
+# Location Sensors
+
+ Location:
+   view: yes
+   icon: mdi:crosshairs-gps
+   entities:
+     - sensor.to_home_max
+     - sensor.to_home_sophie
+     - sensor.to_work
+     - group.people
