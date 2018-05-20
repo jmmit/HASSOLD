@@ -6,6 +6,7 @@ slider1:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider2:
   name: Hallway Temperature
@@ -13,6 +14,7 @@ slider2:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
   
 slider3:
   name: Dinning Room Temperature
@@ -20,6 +22,7 @@ slider3:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider4:
   name: Kitchen Temperature
@@ -27,6 +30,7 @@ slider4:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider5:
   name: Toilet Room Temperature
@@ -34,6 +38,7 @@ slider5:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider6:
   name: Office Temperature
@@ -41,6 +46,7 @@ slider6:
   min: 15
   max: 25
   step: 1
+  unit_of_measurement: C
 
 slider7:
   name: Bedroom Temperature
@@ -48,6 +54,7 @@ slider7:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider8:
   name: Izzy Room Temperature
@@ -55,6 +62,7 @@ slider8:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider9:
   name: Lucas Room Temperature
@@ -62,6 +70,7 @@ slider9:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
 slider10:
   name: Baby Room Temperature
@@ -69,10 +78,12 @@ slider10:
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
 
-slider1:
+slider11:
   name: Bath Room Temperature
   initial: 21
   min: 15
   max: 28
   step: 1
+  unit_of_measurement: C
