@@ -7,11 +7,11 @@ homeassistant:
   unit_system: metric
   time_zone: !secret time_zone
   #customize: !include_dir_merge_named includes/customize/
-#panel_iframe:
-#  configurator:
-#  title: Configurator
-#    icon: mdi:wrench
-#    url: !secret config_url
+panel_iframe:
+  configurator:
+  title: Configurator
+  icon: mdi:wrench
+  url: !secret config_url
 history:
   exclude:
     domains:
