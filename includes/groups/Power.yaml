@@ -1,0 +1,7 @@
+# Power Switches
+
+Power:
+  view: yes
+  icon: mdi:power
+  entities:
+    - group.all_switches
