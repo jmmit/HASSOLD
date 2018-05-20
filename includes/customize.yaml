@@ -14,3 +14,9 @@ light.level_3
   friendly_name: Izzy
 light.level_4
   friendly_name: Lounge
+switch.fibaro_system_fgs213_switch_switch
+  hidden: true
+switch.switch
+  friendly_name: One of the switches
+switch.switch_2
+  friendly_name: 'Extractor Fan'
