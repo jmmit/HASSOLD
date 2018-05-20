@@ -1,1 +1,20 @@
 #Device Tracker
+
+homeassistant_mc:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Max
+  picture:
+  track: true
+  vendor:
+
+homeassistant_sc:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Sophie
+  picture:
+  track: true
+  vendor:
+
