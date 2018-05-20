@@ -62,6 +62,7 @@ input_boolean: !include includes/booleans.yaml
 media_player: !include includes/mediaplayer.yaml
 remote: !include includes/remotes.yaml
 camera: !include includes/cameras.yaml
+shell_commands: !include_dir_merge_named scripts/shell/
 
 
 weather:
