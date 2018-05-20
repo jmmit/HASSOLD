@@ -4,86 +4,97 @@ slider1:
   name: Living Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider2:
   name: Hallway Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
   
 slider3:
   name: Dinning Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider4:
   name: Kitchen Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider5:
   name: Toilet Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider6:
   name: Office Temperature
-  initial: 19
+  initial: 21
   min: 15
   max: 25
-  step: 1
-  unit_of_measurement: C
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider7:
   name: Bedroom Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider8:
   name: Izzy Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider9:
   name: Lucas Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider10:
   name: Baby Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
 
 slider11:
   name: Bath Room Temperature
   initial: 21
   min: 15
-  max: 28
-  step: 1
-  unit_of_measurement: C
+  max: 25
+  step: 0.5
+  icon: mdi:fire
+  unit_of_measurement: '°C'
