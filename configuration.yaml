@@ -109,9 +109,9 @@ zwave:
 
 cloud:
 
-#weather:
-#  - platform: openweathermap
-#    api_key: !secret weather_api
+weather:
+  - platform: openweathermap
+    api_key: !secret weather_api
     
 tts:
   - platform: google
