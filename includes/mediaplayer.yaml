@@ -19,7 +19,7 @@
   password: !secret kodi_pass
 
 - platform: kodi
-  host: !secret kodi_Kitchen
+  host: !secret kodi_kitchen
   name: Kitchen
   username: !secret kodi_user
   password: !secret kodi_pass
