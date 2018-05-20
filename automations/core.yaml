@@ -3,7 +3,7 @@
 - id: HASS_Startup
   alias: HASS Startup
   initial_state: True
-  hide_entity: True
+  hide_entity: False
   trigger:
   - platform: homeassistant
     event: start
