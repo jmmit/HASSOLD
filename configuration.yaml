@@ -58,7 +58,7 @@ sensor: !include_dir_merge_named includes/sensors/
 automation: !include_dir_merge_named includes/automations/
 #script: !include_dir_merge_named includes/scripts/
 zone: !include includes/zones.yaml
-#input_boolean: !include includes/booleans.yaml
+input_boolean: !include includes/booleans.yaml
 media_player: !include includes/mediaplayer.yaml
 #remote: !include includes/remotes.yaml
 #camera: !include includes/cameras.yaml
