@@ -46,4 +46,4 @@
 - platform: squeezebox
   host: 192.168.1.251
   username: !secret lms_user
-  password: !secre lms_pass
+  password: !secret lms_pass
