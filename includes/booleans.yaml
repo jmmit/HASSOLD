@@ -1,0 +1,4 @@
+extractor_fan:
+    name: Bathroom Extractor Fan
+    initial: off
+    icon: mdi:fan
