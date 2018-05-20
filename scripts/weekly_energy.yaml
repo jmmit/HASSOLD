@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+
+import requests, lxml.html, json
+
+s = requests.session()
+
+login = s.get('https://my.sse.co.uk/your-account/login')
+login_html = lxml.html.fromstring(login.text)
+hidden_inputs = login_html.xpath(r'//form//input[@type="hidden"]')
+form = {x.attrib["name"]: x.attrib["value"] for x in hidden_inputs}
+
+account = '1234567890'
+form['email'] = 'youremail@gmail.com'
+form['password'] = 'yourpassword'
+response = s.post('https://my.sse.co.uk/your-account/login', data=form)
+
+test = s.get('https://my.sse.co.uk/Usage/GetBarChartData?smartUsage=%7B%22accountNumber%22%3A%22' + account + '%22%2C%22granularity%22%3A%223%22%2C%22getComparisonData%22%3Afalse%2C%22isCalendarSelected%22%3Afalse%7D')
+
+b = test.text
+
+file = open("/home/pi/my_code/energy/weekly_energy.json", "w")
+file.write(test.content)
+file.close()
+
+with open('/home/pi/my_code/energy/weekly_energy.json') as data_file:    
+    data = json.load(data_file)
+one = data["BarChartData"]["datasets"][0]["data"][26]
+two = data["BarChartData"]["datasets"][0]["data"][25]
+three = data["BarChartData"]["datasets"][0]["data"][24]
+four = data["BarChartData"]["datasets"][0]["data"][23]
+five = data["BarChartData"]["datasets"][0]["data"][22]
+six = data["BarChartData"]["datasets"][0]["data"][21]
+seven = data["BarChartData"]["datasets"][0]["data"][20]
+
+eight = data["BarChartData"]["datasets"][0]["data"][19]
+nine = data["BarChartData"]["datasets"][0]["data"][18]
+ten = data["BarChartData"]["datasets"][0]["data"][17]
+eleven = data["BarChartData"]["datasets"][0]["data"][16]
+twelve = data["BarChartData"]["datasets"][0]["data"][15]
+thirteen = data["BarChartData"]["datasets"][0]["data"][14]
+fourteen = data["BarChartData"]["datasets"][0]["data"][13]
+fifteen = data["BarChartData"]["datasets"][0]["data"][12]
+updated = data["ListView"]["ListViewData"][0]["ReadingUsage"]
+
+total_wk1 = one + two + three + four + five + six + seven
+total_wk2 = eight + nine + ten + eleven + twelve + thirteen + fourteen
+
+total_wk1_not_updated = two + three + four + five + six + seven + eight
+total_wk2_not_updated = nine + ten + eleven + twelve + thirteen + fourteen + fifteen
+
+if updated == "-.--":
+	data = {}
+	data['yesterday'] = "Not Updated"
+	data['wk1'] = total_wk1_not_updated
+	data['wk2'] = total_wk2_not_updated
+	json_data = json.dumps(data)
+
+	file = open("/home/pi/my_code/energy/weekly_energy_final.json", "w")
+	file.write(json_data)
+	file.close()
+else:
+	data = {}
+	data['yesterday'] = one
+	data['wk1'] = total_wk1
+	data['wk2'] = total_wk2
+	json_data = json.dumps(data)
+
+	file = open("/home/pi/my_code/energy/weekly_energy_final.json", "w")
+	file.write(json_data)
+	file.close()
