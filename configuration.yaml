@@ -11,13 +11,12 @@ panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
-    url: !secret base_url
+    url: !secret config_url
 history:
   exclude:
     domains:
-      - automatiom
+      - automation
       - updater
-      - input_boolean
       - zone
       - zwave
       - media_player
@@ -35,14 +34,13 @@ http:
     - 127.0.0.1
     - ::1
     - 192.168.1.0/24
-record:
+recorder:
   purge_interval: 1
   purge_keep_days: 7
   exclude:
     domains:
-      - automatiom
+      - automation
       - updater
-      - input_boolean
       - zone
       - zwave
       - media_player
