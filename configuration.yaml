@@ -75,9 +75,9 @@ zwave:
   #network_key: !secret wave
   polling_interval: 30000
 
-#device_tracker:
-#  - platform: owntracks
-#    max_gps_accuracy: 50
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 50
     
 nest:
   client_id: !secret nest_id
