@@ -2,7 +2,7 @@
 
 - platform: kodi
   name: KodiLounge
-  host: !secre kodi_lounge
+  host: !secret kodi_lounge
 
 - platform: kodi
   name: KodiBedroom
