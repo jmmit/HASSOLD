@@ -1,0 +1,3 @@
+# Get Daily energy usage from SSE
+
+get_energy_sse: python /config/scripts/weekly_energy.py
