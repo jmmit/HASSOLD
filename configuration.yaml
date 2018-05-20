@@ -64,9 +64,6 @@ conversation:
 #camera: !include includes/cameras.yaml
 #shell_commands: !include_dir_merge_named scripts/shell/
 
-
-weather:
-
 mqtt:
   broker: 192.168.1.250
   username: !secret mqttt_user
