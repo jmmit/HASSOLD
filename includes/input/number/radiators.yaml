@@ -1,0 +1,78 @@
+# Radiator Temperatures
+
+slider1:
+  name: Living Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider2:
+  name: Hallway Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+  
+slider3:
+  name: Dinning Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider4:
+  name: Kitchen Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider5:
+  name: Toilet Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider6:
+  name: Office Temperature
+  initial: 19
+  min: 15
+  max: 25
+  step: 1
+
+slider7:
+  name: Bedroom Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider8:
+  name: Izzy Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider9:
+  name: Lucas Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider10:
+  name: Baby Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
+
+slider1:
+  name: Bath Room Temperature
+  initial: 21
+  min: 15
+  max: 28
+  step: 1
