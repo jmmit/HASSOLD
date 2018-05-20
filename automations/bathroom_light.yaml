@@ -1,0 +1,68 @@
+# Rules to control the bathroom light
+
+- alias: Bathroom Light Night Time
+  hide_entity: False
+  trigger:
+  - platform: state
+    entity_id: light.bathroomlight_level
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: time
+    after: '23:00:01'
+    before: '05:00:00'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.bathroomlight_level
+      brightness: 3
+      transition: 2
+
+- alias: Bathroom Light Day Time
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: light.bathroomlight_level
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: time
+    after: '07:30:01'
+    before: '23:00:00'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.bathroomlight_level
+      brightness: 200
+      transition: 3
+- alias: Bathroom Light Early
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: light.bathroomlight_level
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: time
+    after: '05:00:01'
+    before: '07:30:00'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.bathroomlight_level
+      brightness: 20
+      transition: 3
+
+- alias: Bathroom Light Auto Off
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: light.bathroomlight_level
+    from: 'off'
+    to: 'on'
+    for:
+      minutes: 60
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.bathroomlight_level
