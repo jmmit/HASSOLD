@@ -30,7 +30,7 @@
   turn_on_action:
     service: wake_on_lan.send_magic_packet
     data:
-      mac: B4:E6:2A:1E:11:0F
+      mac: 7C:1C:4E:03:A1:49
   customize:
     sources:
       - livetv
