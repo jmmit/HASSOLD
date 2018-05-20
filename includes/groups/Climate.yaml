@@ -1,0 +1,18 @@
+# Climate
+
+Climate:
+  view: yes
+  icon: mdi:radiator
+  entities:
+    - group.climate
+    - sensor.livinroomheater_temperature
+    - sensor.izzyheater_temperature
+    # - sensor.dinningroomheater_temperature
+    # - sensor.hallwayheater_temperature
+    # - sensor.lucasroomheater_temperature
+    # - sensor.officeheater_temperature
+    # - sensor.babyroomheater_temperature
+    # - sensor.kitchenheater_temperature
+    # - sensor.bathroomheater_temperature
+    # - sensor.toiletroomheater_temperature
+    # - sensor.bedroomheater_temperature
