@@ -1,0 +1,49 @@
+# Media Players
+
+- platform: kodi
+  host: !secret kodi_lounge
+  name: Lounge
+  username: !secret kodi_user
+  password: !secret kodi_pass
+
+- platform: kodi
+  host: !secret kodi_bedroom
+  name: Bedroom
+  username: !secret kodi_user
+  password: !secret kodi_pass
+
+- platform: kodi
+  host: !secret kodi_dinningroom
+  name: Dinning Room
+  username: !secret kodi_user
+  password: !secret kodi_pass
+
+- platform: kodi
+  host: !secret kodi_Kitchen
+  name: Kitchen
+  username: !secret kodi_user
+  password: !secret kodi_pass
+
+- platform: webostv
+  host: 192.168.1.240
+  name: Lounge_TV
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: B4:E6:2A:1E:11:0F
+  customize:
+    sources:
+      - livetv
+      - youtube
+      - MediaCentre
+      - netflix
+
+- platform: samsungtv
+  host: 192.168.1.241
+  Name: Dinning_TV
+  mac: 00:00:00:00:00:00
+  
+- platform: squeezebox
+  host: 192.168.1.251
+  username: !secret lms_user
+  password: !secre lms_pass
