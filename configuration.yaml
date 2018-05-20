@@ -69,9 +69,6 @@ mqtt:
   username: !secret mqttt_user
   password: !secret api_password
 
-tts:
-  - platform: google
-
 zwave:
   usb_path: /dev/ttyACM0
   #network_key: !secret wave
