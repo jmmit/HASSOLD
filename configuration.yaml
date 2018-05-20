@@ -52,7 +52,7 @@ updater:
 conversation:
 
 #group: !include_dir_merge_named includes/groups/
-#device_tracker: !include includes/device_tracker.yaml
+device_tracker: !include includes/device_tracker.yaml
 notify: !include_dir_merge_named includes/notify/
 #switch: !include_dir_merge_named includes/switchs/
 sensor: !include_dir_merge_named includes/sensors/
