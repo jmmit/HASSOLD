@@ -1,0 +1,5 @@
+# Scripts
+
+myscripts:
+   entities:
+     - script.nighttimeoff
