@@ -1,0 +1,127 @@
+## Home Assistant Configuration ##
+homeassistant:
+  name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  elevation: 25
+  unit_system: metric
+  time_zone: !secret time_zone
+  #customize: !include_dir_merge_named includes/customize/
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: !secret base_url
+history:
+  exclude:
+    domains:
+      - automatiom
+      - updater
+      - input_boolean
+      - zone
+      - zwave
+      - media_player
+sun:
+config:
+frontend:
+http:
+  api_password: !secret api_password
+  #ssl_certificate: !secret ssl_certificate
+  #ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+  trusted_networks:
+    - 127.0.0.1
+    - ::1
+    - 192.168.1.0/24
+record:
+  purge_interval: 1
+  purge_keep_days: 7
+  exclude:
+    domains:
+      - automatiom
+      - updater
+      - input_boolean
+      - zone
+      - zwave
+      - media_player
+logger:
+  default: error
+updater:
+  include_used_components: true
+conversation:
+
+group: !include_dir_merge_named includes/groups/
+device_tracker: !include includes/device_tracker.yaml
+notify: !include_dir_merge_named includes/notify/
+switch: !include_dir_merge_named includes/switchs/
+sensor: !include_dir_merge_named includes/sensors/
+automation: !include_dir_merge_named includes/automations/
+script: !include_dir_merge_named includes/scripts/
+zone: !include includes/zones.yaml
+input_boolean: !include includes/booleans.yaml
+media_player: !include includes/mediaplayer.yaml
+remote: !include includes/remotes.yaml
+camera: !include includes/cameras.yaml
+
+
+weather:
+
+mqtt:
+  broker: 192.168.1.250
+  username: !secret mqttt_user
+  password: !secret api_password
+
+tts:
+  - platform: google
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret wave
+  polling_interval: 30000
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 50
+    
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+  sensors:
+    monitored_conditions:
+      - co_status
+      - smoke_status
+      - battery_health
+
+ifttt:
+  key: !secret ifttt_key
+
+alarm_control_panel:
+  - platform: manual_mqtt
+    name: Home_Alarm
+    code: !secret alarm_code
+    pending_time: 20
+    trigger_time: 15
+    state_topic: home/alarm
+    command_topic: home/alarm/set
+    armed_home:
+      pending_time: 0
+
+cloud:
+
+weather:
+  - platform: openweathermap
+    api_key: !secret weather_api
+    
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 3600
+
+discovery:
+ffmpeg:
+
+system_log:
+  max_entries: 200
