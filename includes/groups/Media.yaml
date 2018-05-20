@@ -1,0 +1,7 @@
+# Media Players
+
+ Media:
+   view: yes
+   icon: mdi:play-pause
+   entities:
+     - group.media
