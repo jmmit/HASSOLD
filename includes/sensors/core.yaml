@@ -1,0 +1,4 @@
+# Core Sensors
+
+- platform: cert_expiry
+  host: !secret base_url
