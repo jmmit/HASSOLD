@@ -1,0 +1,11 @@
+# Internet / Web
+
+ Web:
+   view: yes
+   icon: mdi:web
+   entities:
+     - sensor.speedtest_download
+     - sensor.speedtest_ping
+     - sensor.speedtest_upload
+     - sensor.ssl_certificate_expiry
+
