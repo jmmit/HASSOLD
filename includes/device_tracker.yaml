@@ -3,7 +3,7 @@
 homeassistant_mc:
   hide_if_away: false
   icon:
-  mac:
+  mac: 94:65:2d:6f:19:6d
   name: Max
   picture:
   track: true
@@ -12,7 +12,7 @@ homeassistant_mc:
 homeassistant_sc:
   hide_if_away: false
   icon:
-  mac:
+  mac: C0:EE:FB:F6:01:38
   name: Sophie
   picture:
   track: true
