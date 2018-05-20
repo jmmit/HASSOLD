@@ -20,6 +20,6 @@
 
 - name: Wales
   latitude: !secret mum_lat
-  lonitude: !secret mum_lon
+  longitude: !secret mum_lon
   readius: 50000
   icon: mdi:home-map-marker
