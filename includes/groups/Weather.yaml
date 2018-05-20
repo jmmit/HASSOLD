@@ -1,0 +1,13 @@
+# Weather Sensors
+
+Weather:
+   view: yes
+   icon: mdi:weather-cloudy
+   entities:
+     - sensor.dark_sky_hourly_summary
+     - sun.sun
+     - sensor.dark_sky_wind_speed
+     - sensor.dark_sky_temperature
+     - sensor.dark_sky_summary
+     - sensor.dark_sky_precip_probability
+     - sensor.dark_sky_precip
