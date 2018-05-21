@@ -4,7 +4,7 @@
   hide_entity: False
   trigger:
   - platform: state
-    entity_id: light.level
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level
     from: 'off'
     to: 'on'
   condition:
@@ -14,7 +14,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.level
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level
       brightness: 3
       transition: 2
 
