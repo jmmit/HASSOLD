@@ -5,7 +5,7 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: alarm_control_panel.home
+      entity_id: alarm_control_panel.home_alarm
       to: 'triggered'
   action:
     - service: notify.PBMax
@@ -16,3 +16,12 @@
       data:
         title: HOUSE ALARM
         message: THE HOUSE ALARM HAS BEEN TRIGGERED!
+     - service: light.turn_on
+       data:
+         entity_id: light.level
+     - service: light.turn_on
+       data:
+         entity_id: light.level_3
+     - service: light.turn_on
+       data:
+         entity_id: light.level_4
