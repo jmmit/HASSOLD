@@ -1,4 +1,9 @@
-extractor_fan:
+  extractor_fan:
     name: Bathroom Extractor Fan
     initial: off
     icon: mdi:fan
+
+  party_mode:
+    name: Party Mode
+    initial: off
+    icon: mdi:account-group
