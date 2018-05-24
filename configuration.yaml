@@ -9,7 +9,7 @@ homeassistant:
   elevation: 25
   unit_system: metric
   time_zone: !secret time_zone
-  customize: !include customize.yaml
+  customize: !include includes/customize.yaml
 http:
   api_password: !secret http_password
   base_url: !secret base_url
