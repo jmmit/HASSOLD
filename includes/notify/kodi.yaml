@@ -1,17 +1,17 @@
 #Kodi Media Players as Notifications
 
-- platform: kodi
-  name: KodiLounge
-  host: !secret kodi_lounge
+  - platform: kodi
+    name: KodiLounge
+    host: !secret kodi_lounge
 
-- platform: kodi
-  name: KodiBedroom
-  host: !secret kodi_bedroom
+  - platform: kodi
+    name: KodiBedroom
+    host: !secret kodi_bedroom
 
-- platform: kodi
-  name: DinningRoom
-  host: !secret kodi_dinningroom
+  - platform: kodi
+    name: DinningRoom
+    host: !secret kodi_dinningroom
 
-- platform: kodi
-  name: Kitchen
-  host: !secret kodi_kitchen
+  - platform: kodi
+    name: Kitchen
+    host: !secret kodi_kitchen
