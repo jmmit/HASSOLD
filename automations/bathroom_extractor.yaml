@@ -1,98 +1,113 @@
-# Control the Bathroom Extractor
+###########################################
+# Rules to control Bathroom Extractor Fan #
+###########################################
 
-- alias: Turn Bathroom Extractor On
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-    for:
-      minutes: 5
-  condition:
-    condition: time
-    after: '05:30:00'
-    before: '21:30:00'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.switch_2
-
-- alias: Turn boolean off when light turns on
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-  - platform: state
-    entity_id: switch.switch_2
-  action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.extractor_fan
-
-- alias: Turn Boolean off when fan turns off
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: switch.switch_2
-    from: 'on'
-    to: 'off'
-  action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.extractor_fan
-
-- alias: Turn extractor on with flash of lights
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'on'
-    to: 'off'
-  condition:
-    condition: state
-    entity_id: input_boolean.extractor_fan
-    state: 'off'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id: switch.switch_2
+# Turn fan on with light after 5 minutes
+  - alias: 'Turn Bathroom Extractor On'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level_2
+        from: 'off'
+        to: 'on'
+        for:
+          minutes: 5
+    condition:
+      condition: time
+      after: '05:30:00'
+      before: '21:30:00'
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.switch_2
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.extractor_fan
         
-- alias: Stop fan coming on if under 5 min
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-    for:
-      seconds: 3
-  action:
-    - service: input_boolean.turn_on
+# Turn fan off after 40 minutes
+  - alias: 'Turn Extractor off after 40 minutes'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.switch_2
+        from: 'off'
+        to: 'on'
+        for:
+          minutes: 40
+    action:
+      service: switch.turn_off
+      data:
+        entity_id: switch.switch_2
+
+# Turn fan off with light
+  - alias: Turn fan off with light
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level_2
+        from: 'on'
+        to: 'off'
+    condition:
+      - condition: state
+        entity_id: switch.switch_2
+        state: 'on'
+    action:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.switch_2
+      - service: input_boolean.turn_on
+        entity_id: input.boolean.extractor_fan
+
+# Turn the boolean on as light turns on
+  - alias: Turn boolean off when light turns on
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level_2
+        from: 'off'
+        to: 'on'
+    action:
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.extractor_fan
+
+# Stop fan coming on if under 5 minutes
+  - alias: Stop fan coming on if under 5 min
+    hide_entity: True
+    trigger:
+      - platform: state
+      entity_id: light.level_2
+      from: 'off'
+      to: 'on'
+      for:
+        seconds: 5
+    action:
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.extractor_fan
+
+# Turn fan on with flash of lights
+  - alias: Turn extractor on with flash of lights
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level_2
+        from: 'on'
+        to: 'off'
+    condition:
+      condition: state
       entity_id: input_boolean.extractor_fan
+      state: 'on'
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.switch_2
 
-- alias: Turn Extractor off after 40 minutes
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: switch.switch_2
-    from: 'off'
-    to: 'on'
-    for:
-      minutes: 30
-  action:
-    service: switch.turn_off
-    data:
-      entity_id: switch.switch_2
-      
-- alias: Turn fan off with light
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'on'
-    to: 'off'
-  action:
-    service: switch.turn_off
-    entity_id: switch.switch_2
-
-
+# Reset boolean after fan turns off
+  - alias: Turn Boolean on when fan turns off
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.switch_2
+        from: 'on'
+        to: 'off'
+    action:
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.extractor_fan
