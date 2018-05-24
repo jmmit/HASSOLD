@@ -1,15 +1,15 @@
 # Lets go to bed!
 
-- id: NightTime
-  alias: 'Night Time All Off'
-  hide_entity: false
-  trigger:
-    - platform: state
-      entity_id: input_select.nighttime
-  action:
-    - service: light.turn_off
-      entity_id: group.all_lights
-    - service: homeassistant.turn_off
-      entity_id: group.all_switches
-    - service: halarm_control_panel.alarm_arm_home
-      entity_id: alarm_control_panel.home_alarm
+  - id: NightTime
+    alias: 'Night Time All Off'
+    hide_entity: false
+    trigger:
+      - platform: state
+        entity_id: input_select.nighttime
+    action:
+      - service: light.turn_off
+        entity_id: group.all_lights
+      - service: homeassistant.turn_off
+        entity_id: group.all_switches
+      - service: halarm_control_panel.alarm_arm_home
+        entity_id: alarm_control_panel.home_alarm
