@@ -1,4 +1,7 @@
-## Home Assistant Configuration ##
+######################
+# CORE CONFIGURATION #
+######################
+
 homeassistant:
   name: Home
   latitude: !secret home_lat
@@ -6,12 +9,30 @@ homeassistant:
   elevation: 25
   unit_system: metric
   time_zone: !secret time_zone
-  customize: !include includes/customize.yaml
-#panel_iframe:
-#  configurator:
-#  title: Configurator
-#  icon: mdi:wrench
-#  url: !secret config_url
+  customize: !include customize.yaml
+http:
+  api_password: !secret http_password
+  base_url: !secret base_url
+  #ssl_certificate: !secret ssl_certificate
+  #ssl_key: !secret ssl_key
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+  trusted_networks:
+    - 127.0.0.1
+    - ::1
+    - 192.168.1.0/24
+updater:
+  include_used_components: true
+frontend:
+cloud:
+config:
+discovery:
+conversation:
+logbook:
+
+####################################
+# Logging and Histoy Configuration #
+####################################
 history:
   exclude:
     domains:
@@ -19,22 +40,6 @@ history:
       - updater
       - zone
       - zwave
-      - media_player
-map:
-sun:
-config:
-frontend:
-http:
-  api_password: !secret api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  base_url: !secret base_url
-  ip_ban_enabled: true
-  login_attempts_threshold: 5
-  trusted_networks:
-    - 127.0.0.1
-    - ::1
-    - 192.168.1.0/24
 recorder:
   purge_interval: 1
   purge_keep_days: 7
@@ -44,59 +49,63 @@ recorder:
       - updater
       - zone
       - zwave
-      - media_player
 logger:
   default: error
-updater:
-  include_used_components: true
-conversation:
+system_log:
+  max_entries: 150
 
-#group: !include_dir_merge_named includes/groups/
-notify: !include_dir_merge_named includes/notify/
-#switch: !include_dir_merge_named includes/switchs/
-sensor: !include_dir_merge_named includes/sensors/
-automation: !include_dir_merge_named includes/automations/
-#script: !include_dir_merge_named includes/scripts/
-zone: !include includes/zones.yaml
-input_boolean: !include includes/booleans.yaml
-media_player: !include includes/mediaplayer.yaml
-#remote: !include includes/remotes.yaml
-#camera: !include includes/cameras.yaml
-#shell_commands: !include_dir_merge_named scripts/shell/
-
-mqtt:
-  broker: 192.168.1.250
-  username: !secret mqttt_user
-  password: !secret api_password
+########################
+# Z-Wave Configuration #
+########################
 
 zwave:
   usb_path: /dev/ttyACM0
-  #network_key: !secret wave
-  polling_interval: 30000
+  network_key: !secret zwave_key
+  polling_interval: 40000
+ 
+#######################
+# Other Configuration #
+########################
+sun:
+ffmpeg:
+################################
+# Text to Speech Configuration #
+################################
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 3600
 
-device_tracker:
-  - platform: owntracks
-    max_gps_accuracy: 50
-  - platform: nmap_tracker
-    track_new_devices: false
-    hosts: 192.168.1.0/24
-    home_interval: 60
-    exclude:
-      - 192.168.1.250
-    
+#######################
+# MQTTT Configuration #
+#######################
+mqtt:
+  broker: 192.168.1.250
+  username: !secret mqttt_user
+  password: !secret http_password
+
+######################
+# Nest Configuration #
+######################
 nest:
   client_id: !secret nest_id
   client_secret: !secret nest_secret
   sensors:
     monitored_conditions:
       - co_status
-      - co_status
       - smoke_status
       - battery_health
-
+      
+#######################
+# IFTTT Configuration #
+#######################
 ifttt:
   key: !secret ifttt_key
 
+############################
+# Home Alarm Control Panel #
+############################
 alarm_control_panel:
   - platform: manual_mqtt
     name: Home_Alarm
@@ -108,20 +117,43 @@ alarm_control_panel:
     armed_home:
       pending_time: 0
 
-cloud:
-
+#########################
+# Weather Configuration #
+#########################
 weather:
   - platform: openweathermap
     api_key: !secret weather_api
     
-tts:
-  - platform: google
-    cache: true
-    cache_dir: /tmp/tts
-    time_memory: 3600
+###################
+# Device Tracking #
+###################
 
-discovery:
-ffmpeg:
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 50
+  - platform: nmap_tracker
+    track_new_devices: false
+    hosts: 192.168.1.0/24
+    home_interval: 60
+    exclude:
+      - 192.168.1.250
 
-system_log:
-  max_entries: 200
+############
+# Includes #
+############
+
+# Direcrtories
+automation: !include_dir_merge_list automations/
+#group: !include_dir_merge_list includes/groups/
+#notify: !include_dir_merge_list includes/notify/
+#switch: !include_dir_merge_list includes/switchs/
+#sensor: !include_dir_merge_list includes/sensors/
+#script: !include_dir_merge_list includes/scripts/
+#shell_commands: !include_dir_merge_list scripts/shell/
+
+# Single Files
+input_boolean: !include includes/input_boolean.yaml
+#media_player: !include includes/mediaplayer.yaml
+#zone: !include includes/zones.yaml
+#remote: !include includes/remotes.yaml
+#camera: !include includes/cameras.yaml
