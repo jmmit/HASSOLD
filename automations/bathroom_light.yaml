@@ -1,68 +1,79 @@
 # Rules to control the bathroom light
 
-- alias: Bathroom Light Night Time
-  hide_entity: False
-  trigger:
-  - platform: state
-    entity_id: light.fibaro_system_fgd212_dimmer_2_level
-    from: 'off'
-    to: 'on'
-  condition:
-    condition: time
-    after: '23:00:01'
-    before: '05:00:00'
-  action:
-    service: light.turn_on
-    data:
-      entity_id: light.fibaro_system_fgd212_dimmer_2_level
-      brightness: 3
-      transition: 2
+# Don't burn my eyes at night
+  - alias: Bathroom Light Night Time
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        from: 'off'
+        to: 'on'
+    condition:
+      condition: time
+      after: '23:00:01'
+      before: '05:00:00'
+    action:
+      service: light.turn_on
+      data:
+        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        brightness: 3
+        transition: 2
 
-- alias: Bathroom Light Day Time
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-  condition:
-    condition: time
-    after: '07:30:01'
-    before: '23:00:00'
-  action:
-    service: light.turn_on
-    data:
-      entity_id: light.level
-      brightness: 200
-      transition: 3
-- alias: Bathroom Light Early
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-  condition:
-    condition: time
-    after: '05:00:01'
-    before: '07:30:00'
-  action:
-    service: light.turn_on
-    data:
-      entity_id: light.level
-      brightness: 20
-      transition: 3
-
-- alias: Bathroom Light Auto Off
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: light.level
-    from: 'off'
-    to: 'on'
-    for:
-      minutes: 60
-  action:
-    service: light.turn_off
-    data:
-      entity_id: light.level
+# Light full brightness during the day
+  - alias: Bathroom Light Day Time
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level
+        from: 'off'
+        to: 'on'
+    condition:
+      condition: time
+      after: '07:30:01'
+      before: '23:00:00'
+    action:
+      service: light.turn_on
+      data:
+        entity_id: light.level
+        brightness: 200
+        transition: 3
+ 
+# Light wakeup routine
+  - alias: Bathroom Light Early
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level
+        from: 'off'
+        to: 'on'
+    condition:
+      condition: time
+      after: '05:00:01'
+      before: '07:30:00'
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: light.level
+          brightness: 15
+          transition: 3
+      - delay: '00:10:00'
+      - service: light.turn_on
+        data:
+          entity_id: light.level
+          brightness: 200
+          transition: 1200
+    
+# Automatically turn light off after 80 minutes
+  - alias: Bathroom Light Auto Off
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.level
+        from: 'off'
+        to: 'on'
+        for:
+          minutes: 80
+    action:
+      service: light.turn_off
+      data:
+        entity_id: light.level
