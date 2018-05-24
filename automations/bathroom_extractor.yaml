@@ -74,11 +74,11 @@
     hide_entity: True
     trigger:
       - platform: state
-      entity_id: light.level_2
-      from: 'off'
-      to: 'on'
-      for:
-        seconds: 5
+        entity_id: light.level_2
+        from: 'off'
+        to: 'on'
+        for:
+          seconds: 5
     action:
       - service: input_boolean.turn_off
         entity_id: input_boolean.extractor_fan
