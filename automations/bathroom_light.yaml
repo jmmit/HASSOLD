@@ -9,9 +9,12 @@
         from: 'off'
         to: 'on'
     condition:
-      condition: time
-      after: '23:00:01'
-      before: '05:00:00'
+      - condition: time
+        after: '22:30:01'
+        before: '05:00:00'
+      - condition: state
+        entity_id: input_boolean.party_mode
+        state: 'off'
     action:
       service: light.turn_on
       data:
