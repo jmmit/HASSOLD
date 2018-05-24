@@ -1,99 +1,99 @@
 # Alarm for smoke
 
-- id: SMOKE_WARNING_DOWNSTAIRS
-  alias: SMOKE WARNING DOWNSTAIRS
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: sensor.downstairs_nest_protect_smoke_status
-    to: 'Warning'
-  action:
-    - service: notify.PBMax
-      data:
-        title: Smoke Warning
-        message: Warning! Downstairs smoke alarm has detected light levels of smoke.
-    - service: notify.PBSophie
-      data:
-        title: Smoke Warning
-        message: Warning! Downstairs smoke alarm has detected light levels of smoke.
+  - id: SMOKE_WARNING_DOWNSTAIRS
+    alias: SMOKE WARNING DOWNSTAIRS
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.downstairs_nest_protect_smoke_status
+        to: 'Warning'
+    action:
+      - service: notify.PBMax
+        data:
+          title: Smoke Warning
+          message: Warning! Downstairs smoke alarm has detected light levels of smoke.
+      - service: notify.PBSophie
+        data:
+          title: Smoke Warning
+          message: Warning! Downstairs smoke alarm has detected light levels of smoke.
 
-- id: SMOKE_ALARM_DOWNSTAIRS
-  alias: SMOKE ALARM DOWNSTAIRS
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: sensor.downstairs_nest_protect_smoke_status
-    to: 'Emergency'
-  action:
-    - service: notify.PBMax
-      data:
-        title: SMOKE ALARM
-        message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
-    - service: notify.PBSophie
-      data:
-        title: SMOKE ALARM
-        message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
-    - service: light.turn_on
-      data:
-        entity_id: light.level
-        brightness: 255
-    - service: light.turn_on
-      data:
-        entity_id: light.level_3
-        brightness: 255
-    - service: light.turn_on
-      data:
-        entity_id: light.level_4
-        brightness: 255
-    - service: homeassistant.turn_on
-      data:
-        entity_id: switch.switch_2
+  - id: SMOKE_ALARM_DOWNSTAIRS
+    alias: SMOKE ALARM DOWNSTAIRS
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.downstairs_nest_protect_smoke_status
+        to: 'Emergency'
+    action: 
+      - service: notify.PBMax
+        data:
+          title: SMOKE ALARM
+          message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
+      - service: notify.PBSophie
+        data:
+          title: SMOKE ALARM
+          message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
+      - service: light.turn_on
+        data:
+          entity_id: light.level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.level_3
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.level_4
+          brightness: 255
+      - service: homeassistant.turn_on
+        data:
+          entity_id: switch.switch_2
 
-- id: SMOKE_WARNING_Upstairs
-  alias: SMOKE WARNING Upstairs
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: sensor.Upstairs_nest_protect_smoke_status
-    to: 'Warning'
-  action:
-    - service: notify.PBMax
-      data:
-        title: Smoke Warning
-        message: Warning! Upstairs smoke alarm has detected light levels of smoke.
-    - service: notify.PBSophie
-      data:
-        title: Smoke Warning
-        message: Warning! Upstairs smoke alarm has detected light levels of smoke.
+  - id: SMOKE_WARNING_Upstairs
+    alias: SMOKE WARNING Upstairs
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.Upstairs_nest_protect_smoke_status
+        to: 'Warning'
+    action:
+      - service: notify.PBMax
+        data:
+          title: Smoke Warning
+          message: Warning! Upstairs smoke alarm has detected light levels of smoke.
+      - service: notify.PBSophie
+        data:
+          title: Smoke Warning
+          message: Warning! Upstairs smoke alarm has detected light levels of smoke.
 
-- id: SMOKE_ALARM_Upstairs
-  alias: SMOKE ALARM Upstairs
-  hide_entity: True
-  trigger:
-  - platform: state
-    entity_id: sensor.Upstairs_nest_protect_smoke_status
-    to: 'Emergency'
-  action:
-    - service: notify.PBMax
-      data:
-        title: SMOKE ALARM
-        message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
-    - service: notify.PBSophie
-      data:
-        title: SMOKE ALARM
-        message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
-    - service: light.turn_on
-      data:
-        entity_id: light.level
-        brightness: 255
-    - service: light.turn_on
-      data:
-        entity_id: light.level_3
-        brightness: 255
-    - service: light.turn_on
-      data:
-        entity_id: light.level_4
-        brightness: 255
-    - service: homeassistant.turn_on
-      data:
-        entity_id: switch.switch_2
+  - id: SMOKE_ALARM_Upstairs
+    alias: SMOKE ALARM Upstairs
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.Upstairs_nest_protect_smoke_status
+        to: 'Emergency'
+    action:
+      - service: notify.PBMax
+        data:
+          title: SMOKE ALARM
+          message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
+      - service: notify.PBSophie
+        data:
+          title: SMOKE ALARM
+          message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
+      - service: light.turn_on
+        data:
+          entity_id: light.level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.level_3
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.level_4
+          brightness: 255
+      - service: homeassistant.turn_on
+        data:
+          entity_id: switch.switch_2
