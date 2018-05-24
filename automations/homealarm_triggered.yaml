@@ -1,27 +1,27 @@
 # Home Alarm has been triggered
 
-- id: AlarmTriggered
-  alias: 'Alarm Triggered'
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: alarm_control_panel.home_alarm
-      to: 'triggered'
-  action:
-    - service: notify.PBMax
-      data:
-        title: HOUSE ALARM
-        message: THE HOUSE ALARM HAS BEEN TRIGGERED!
-    - service: notify.PBSophie
-      data:
-        title: HOUSE ALARM
-        message: THE HOUSE ALARM HAS BEEN TRIGGERED!
-     - service: light.turn_on
-       data:
-         entity_id: light.level
-     - service: light.turn_on
-       data:
-         entity_id: light.level_3
-     - service: light.turn_on
-       data:
-         entity_id: light.level_4
+  - id: AlarmTriggered
+    alias: 'Alarm Triggered'
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.home_alarm
+        to: 'triggered'
+    action:
+      - service: notify.PBMax
+        data:
+          title: HOUSE ALARM
+          message: THE HOUSE ALARM HAS BEEN TRIGGERED!
+      - service: notify.PBSophie
+        data:
+          title: HOUSE ALARM
+          message: THE HOUSE ALARM HAS BEEN TRIGGERED!
+       - service: light.turn_on
+         data:
+           entity_id: light.level
+       - service: light.turn_on
+         data:
+           entity_id: light.level_3
+       - service: light.turn_on
+         data:
+           entity_id: light.level_4
