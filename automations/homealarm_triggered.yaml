@@ -18,10 +18,10 @@
  #         message: THE HOUSE ALARM HAS BEEN TRIGGERED!
 #       - service: light.turn_on
 #         data:
-#           entity_id: light.level
+#           entity_id: light.loungelight_level
 #       - service: light.turn_on
 #         data:
-#           entity_id: light.level_3
+#           entity_id: light.bathroomlight_level
 #       - service: light.turn_on
 #         data:
-#           entity_id: light.level_4
+#           entity_id: light.izzyLught_level
