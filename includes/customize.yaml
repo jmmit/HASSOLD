@@ -1,14 +1,32 @@
-# Customize
+#############
+# Customize #
+#############
 
-light.level:
+# LIGHTS ######################################
+
+light.izzylight_level:
   friendly_name: 'Izzy'
-light.level_2:
+light.bathroomlight_level:
   friendly_name: 'Bathroom'
-light.level_3:
+light.loungelight_level:
   friendly_name: 'Lounge'
-switch.switch:
-  friendly_name: 'Fish Tank'
-switch.switch_2:
+  
+# SWITCHES #####################################
+
+switch.bathroomextractor_switch:
   friendly_name: 'Extractor Fan'
-switch.switch_3:
+switch.fishtank_switch:
+  friendly_name: 'Fish Tank'
+switch.office_switch:
   friendly_name: 'Office'
+  
+# NONE EXISTING STUFF ##########################
+
+light.izzylight_level_2:
+  hidden: true
+light.bathroomlight_level_2:
+  hidden: true
+light.loungelight_level_2:
+  hidden: true
+switch.bathroomextractor_switch_2
+  hidden: true
