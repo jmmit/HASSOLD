@@ -1,28 +1,28 @@
 # House Alarm
 
-  - id: TriggerAlarm_Lights
-    alias: 'Trigger Alarm with Lights when Armed'
-    hide_entity: True
-    trigger:
-      - platform: state
-        entity_id: light.bathroomlight_level
-        from: 'off'
-        to: 'on'
-      - platform: state
-        entity_id: light.loungelight_level
-        from: 'off'
-        to: 'on'
-      - platform: state
-        entity_id: light.izzylight_level
-        from: 'off'
-        to: 'on'
-    condition:
-      - condition: state
-        entity_id: alarm_control_panel.home_alarm
-        state: armed_away
-    action:
-      service: alarm_control_panel.alarm_trigger
-      entitiy_id: alarm_control_panel.home_alarm
+#  - id: TriggerAlarm_Lights
+#    alias: 'Trigger Alarm with Lights when Armed'
+#    hide_entity: True
+#    trigger:
+#      - platform: state
+#        entity_id: light.bathroomlight_level
+#        from: 'off'
+#        to: 'on'
+#      - platform: state
+#        entity_id: light.loungelight_level
+#        from: 'off'
+#        to: 'on'
+#      - platform: state
+#        entity_id: light.izzylight_level
+#        from: 'off'
+#        to: 'on'
+#    condition:
+#      - condition: state
+#        entity_id: alarm_control_panel.home_alarm
+#        state: armed_away
+#    action:
+#      service: alarm_control_panel.alarm_trigger
+#      entitiy_id: alarm_control_panel.home_alarm
       
 
     
