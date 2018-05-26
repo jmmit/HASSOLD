@@ -19,7 +19,7 @@
     action:
       - service: switch.turn_on
         data:
-          entity_id: switch.extractorfan_switch
+          entity_id: switch.bathroomextractor_switch
       - service: input_boolean.turn_off
         entity_id: input_boolean.extractor_fan
         
@@ -28,7 +28,7 @@
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: switch.extractorfan_switch
+        entity_id: switch.bathroomextractor_switch
         from: 'off'
         to: 'on'
         for:
@@ -36,7 +36,7 @@
     action:
       service: switch.turn_off
       data:
-        entity_id: switch.extractorfan_switch
+        entity_id: switch.bathroomextractor_switch
 
 # Turn fan off with light
   - alias: Turn fan off with light
@@ -98,7 +98,7 @@
     action:
       - service: switch.turn_on
         data:
-          entity_id: switch.extractorfan_switch
+          entity_id: switch.bathroomextractor_switch
 
 # Reset boolean after fan turns off
   - alias: Turn Boolean on when fan turns off
