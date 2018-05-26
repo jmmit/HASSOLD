@@ -55,7 +55,7 @@
         data:
           entity_id: switch.bathextractor_switch
       - service: input_boolean.turn_on
-        entity_id: input_boolean.extractor_fan
+        entity_id: input_boolean.bathroomextractor_switch
 
 # Turn the boolean on as light turns on
   - alias: Turn boolean off when light turns on
