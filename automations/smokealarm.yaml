@@ -92,7 +92,7 @@
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.izzylight_level_4
+          entity_id: light.izzylight_level
           brightness: 255
       - service: homeassistant.turn_on
         data:
