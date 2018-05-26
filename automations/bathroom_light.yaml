@@ -5,7 +5,7 @@
     hide_entity: False
     trigger:
       - platform: state
-        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        entity_id: light.bathroomlight_level
         from: 'off'
         to: 'on'
     condition:
@@ -18,7 +18,7 @@
     action:
       service: light.turn_on
       data:
-        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        entity_id: lightbathroomlight_level
         brightness: 3
         transition: 2
 
@@ -27,7 +27,7 @@
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.level
+        entity_id: light.bathroomlight_level
         from: 'off'
         to: 'on'
     condition:
@@ -37,7 +37,7 @@
     action:
       service: light.turn_on
       data:
-        entity_id: light.level
+        entity_id: light.bathroomlight_level
         brightness: 200
         transition: 3
  
@@ -46,7 +46,7 @@
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.level
+        entity_id: light.bathroomlight_level
         from: 'off'
         to: 'on'
     condition:
@@ -56,13 +56,13 @@
     action:
       - service: light.turn_on
         data:
-          entity_id: light.level
+          entity_id: light.bathroomlight_level
           brightness: 15
           transition: 3
       - delay: '00:10:00'
       - service: light.turn_on
         data:
-          entity_id: light.level
+          entity_id: light.bathroomlight_level
           brightness: 200
           transition: 1200
     
@@ -71,7 +71,7 @@
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.level
+        entity_id: light.bathroomlight_level
         from: 'off'
         to: 'on'
         for:
@@ -79,4 +79,4 @@
     action:
       service: light.turn_off
       data:
-        entity_id: light.level
+        entity_id: light.bathroomlight_level
