@@ -28,5 +28,5 @@ light.bathroomlight_level_2:
   hidden: true
 light.loungelight_level_2:
   hidden: true
-switch.bathroomextractor_switch_2
+switch.bathroomextractor_switch_2:
   hidden: true
