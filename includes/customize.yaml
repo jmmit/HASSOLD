@@ -3,7 +3,7 @@
 light.level:
   friendly_name: 'Izzy'
 light.level_2:
-friendly_name: 'Bathroom'
+  friendly_name: 'Bathroom'
 light.level_3:
   friendly_name: 'Lounge'
 switch.switch:
