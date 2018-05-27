@@ -1,19 +1,19 @@
 # Internet / Web
 
- Web:
-   view: yes
-   icon: mdi:web
-   entities:
-     - sensor.speedtest_download
-     - sensor.speedtest_ping
-     - sensor.speedtest_upload
-     - sensor.ssl_certificate_expiry
-     - sensor.sabnzbd_disk
-     - sensor.sabnzbd_disk_free
-     - sensor.sabnzbd_left
-     - sensor.sabnzbd_queue
-     - sensor.sabnzbd_queue_count
-     - sensor.sabnzbd_speed
-     - sensor.sabnzbd_status
+ #Web:
+ #  view: yes
+ #  icon: mdi:web
+ #  entities:
+ #    - sensor.speedtest_download
+ #    - sensor.speedtest_ping
+ #    - sensor.speedtest_upload
+ #    - sensor.ssl_certificate_expiry
+  #   - sensor.sabnzbd_disk
+ #    - sensor.sabnzbd_disk_free
+ #    - sensor.sabnzbd_left
+ #    - sensor.sabnzbd_queue
+ #    - sensor.sabnzbd_queue_count
+ #    - sensor.sabnzbd_speed
+ #    - sensor.sabnzbd_status
 
 
