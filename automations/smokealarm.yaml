@@ -35,15 +35,7 @@
           message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
       - service: light.turn_on
         data:
-          entity_id: light.bathroomlight_level
-          brightness: 255
-      - service: light.turn_on
-        data:
-          entity_id: light.izzylight_level
-          brightness: 255
-      - service: light.turn_on
-        data:
-          entity_id: light.loungelight_level
+          entity_id: group.all_lights
           brightness: 255
       - service: homeassistant.turn_on
         data:
@@ -84,15 +76,7 @@
           message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
       - service: light.turn_on
         data:
-          entity_id: light.bathroomlight_level
-          brightness: 255
-      - service: light.turn_on
-        data:
-          entity_id: light.loungelight_level
-          brightness: 255
-      - service: light.turn_on
-        data:
-          entity_id: light.izzylight_level
+          entity_id: group.all_lights
           brightness: 255
       - service: homeassistant.turn_on
         data:
