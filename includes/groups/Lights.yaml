@@ -4,4 +4,6 @@ Lights:
   view: yes
   icon: mdi:lighbulb-on
   entities:
-    - group.all_lights
+    - light.bathroomlight_level
+    - light.izzylight_level
+    - light.loungelight_level
