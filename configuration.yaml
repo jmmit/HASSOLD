@@ -146,7 +146,7 @@ device_tracker:
 # Direcrtories
 automation: !include_dir_merge_list automations/
 
-group: !include includes/groups/Lights.yaml
+group: !include includes/groups/Climate.yaml
 notify: !include_dir_merge_list includes/notify/
 #switch: !include_dir_merge_list includes/switchs/
 #sensor: !include_dir_merge_list includes/sensors/
