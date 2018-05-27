@@ -4,6 +4,7 @@ Group_Lights:
   view: yes
   icon: mdi:lightbulb-on
   entities:
-    - light.bathroomlight_level
-    - light.izzylight_level
-    - light.loungelight_level
+    - group.all_lights
+    #- light.bathroomlight_level
+    #- light.izzylight_level
+    #- light.loungelight_level
