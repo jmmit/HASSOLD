@@ -2,7 +2,7 @@
 
 Lights:
   view: yes
-  icon: mdi:lighbulb-on
+  icon: mdi:lightbulb-on
   entities:
     - light.bathroomlight_level
     - light.izzylight_level
