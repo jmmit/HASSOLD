@@ -1,0 +1,7 @@
+#Bathroom Controls
+
+Bathroom:
+  view: yes
+  entities:
+    - light.bathroomlight_level
+    - switch.bathroomextractor_switch
