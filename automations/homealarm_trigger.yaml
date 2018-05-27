@@ -5,15 +5,7 @@
 #    hide_entity: True
 #    trigger:
 #      - platform: state
-#        entity_id: light.bathroomlight_level
-#        from: 'off'
-#        to: 'on'
-#      - platform: state
-#        entity_id: light.loungelight_level
-#        from: 'off'
-#        to: 'on'
-#      - platform: state
-#        entity_id: light.izzylight_level
+#        entity_id: group.all_lights
 #        from: 'off'
 #        to: 'on'
 #    condition:
