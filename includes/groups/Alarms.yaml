@@ -1,16 +1,16 @@
 # All Alarms
 
- Alarms:
-   view: yes
-   icon: mdi:alarm-light
-   entities:
-     - binary_sensor.downstairs_nest_protect_online
-     - binary_sensor.upstairs_nest_protect_online
-     - sensor.downstairs_nest_protect_battery_health
-     - sensor.downstairs_nest_protect_co_status
-     - sensor.downstairs_nest_protect_smoke_status
-     - sensor.downstairs_nest_protect_battery_health
-     - sensor.upstairs_nest_protect_co_status
-     - sensor.upstairs_nest_protect_smoke_status
-     - alarm_control_panel.home
+ - Alarms
+     view: yes
+     icon: mdi:alarm-light
+     entities:
+       - binary_sensor.downstairs_nest_protect_online
+       - binary_sensor.upstairs_nest_protect_online
+       - sensor.downstairs_nest_protect_battery_health
+       - sensor.downstairs_nest_protect_co_status
+       - sensor.downstairs_nest_protect_smoke_status
+       - sensor.downstairs_nest_protect_battery_health
+       - sensor.upstairs_nest_protect_co_status
+       - sensor.upstairs_nest_protect_smoke_status
+       - alarm_control_panel.home_alarm
 
