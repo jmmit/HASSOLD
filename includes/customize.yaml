@@ -20,6 +20,17 @@ switch.fishtank_switch:
 switch.office_switch:
   friendly_name: 'Office'
   
+# DEFAULT GROUPS ###############################
+
+group.all_automations:
+  hidden: false
+group.all_lights:
+  hidden: false
+group.all_climate:
+  hidden: false
+group.all_switches:
+  hidden: false
+  
 # NONE EXISTING STUFF ##########################
 
 light.izzylight_level_2:
