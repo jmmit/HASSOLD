@@ -145,6 +145,7 @@ device_tracker:
 
 # Direcrtories
 automation: !include_dir_merge_list automations/
+
 group: !include_dir_merge_list includes/groups/
 notify: !include_dir_merge_list includes/notify/
 #switch: !include_dir_merge_list includes/switchs/
