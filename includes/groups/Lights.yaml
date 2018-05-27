@@ -1,7 +1,7 @@
 # Lights
 
-Lights:
-  view: yes
-  icon: mdi:lighbulb-on
-  entities:
-    - group.all_lights
+#Lights:
+#  view: yes
+#  icon: mdi:lighbulb-on
+#  entities:
+#    - group.all_lights
