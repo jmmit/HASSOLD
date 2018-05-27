@@ -1,0 +1,99 @@
+# Alarm for CO
+
+  - id: CO_WARNING_DOWNSTAIRS
+    alias: CO WARNING DOWNSTAIRS
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.downstairs_nest_protect_co_status
+        to: 'Warning'
+    action:
+      - service: notify.PBMax
+        data:
+          title: CO Warning
+          message: Warning! Downstairs CO alarm has detected light levels of CO.
+      - service: notify.PBSophie
+        data:
+          title: CO Warning
+          message: Warning! Downstairs co alarm has detected light levels of smoke.
+
+  - id: CO_ALARM_DOWNSTAIRS
+    alias: CO ALARM DOWNSTAIRS
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.downstairs_nest_protect_co_status
+        to: 'Emergency'
+    action: 
+      - service: notify.PBMax
+        data:
+          title: CO ALARM
+          message: EMERGENCY! THERE IS CO DOWNSTAIRS!
+      - service: notify.PBSophie
+        data:
+          title: CO ALARM
+          message: EMERGENCY! THERE IS CO DOWNSTAIRS!
+      - service: light.turn_on
+        data:
+          entity_id: light.bathroomlight_level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.izzylight_level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.loungelight_level
+          brightness: 255
+      - service: homeassistant.turn_on
+        data:
+          entity_id: switch.bathroomextractor_switch
+
+  - id: CO_WARNING_Upstairs
+    alias: CO WARNING Upstairs
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.Upstairs_nest_protect_co_status
+        to: 'Warning'
+    action:
+      - service: notify.PBMax
+        data:
+          title: CO Warning
+          message: Warning! Upstairs CO alarm has detected light levels of CO.
+      - service: notify.PBSophie
+        data:
+          title: CO Warning
+          message: Warning! Upstairs CO alarm has detected light levels of CO.
+
+  - id: CO_ALARM_Upstairs
+    alias: CO ALARM Upstairs
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.Upstairs_nest_protect_co_status
+        to: 'Emergency'
+    action:
+      - service: notify.PBMax
+        data:
+          title: CO ALARM
+          message: EMERGENCY! THERE IS CO UPSTAIRS!
+      - service: notify.PBSophie
+        data:
+          title: CO ALARM
+          message: EMERGENCY! THERE IS CO UPSTAIRS!
+      - service: light.turn_on
+        data:
+          entity_id: light.bathroomlight_level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.loungelight_level
+          brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.izzylight_level
+          brightness: 255
+      - service: homeassistant.turn_on
+        data:
+entity_id: switch.bathroomextractor_switch
