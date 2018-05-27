@@ -4,8 +4,9 @@ Climate:
   view: yes
   icon: mdi:radiator
   entities:
-    - climate.izzyheater_heating_1
-    - climate.loungeheater_heating_1
+    - climate.all_climate
+    #- climate.izzyheater_heating_1
+    #- climate.loungeheater_heating_1
     # - sensor.dinningroomheater_temperature
     # - sensor.hallwayheater_temperature
     # - sensor.lucasroomheater_temperature
