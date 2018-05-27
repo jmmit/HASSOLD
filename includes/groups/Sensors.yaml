@@ -4,7 +4,7 @@
    view: yes
    icon: mdi:access-point
    entities:
-     - sensor.fibaro_system_fgms001_motion_sensor_luminance_2
-     - sensor.fibaro_system_fgms001_motion_sensor_temperature_2
-     - sensor.fibaro_system_fgms001_motion_sensor_general_2
-     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2
+     - sensor.hallwaymultisensor_luminance
+     - sensor.hallwaymultisensor_temperature
+     - sensor.hallwaymultisensor_general
+     - binary_sensor.hallwaymultisensor_sensor
