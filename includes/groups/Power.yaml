@@ -4,6 +4,7 @@ Power:
   view: yes
   icon: mdi:power
   entities:
+    - group.all_switches
     - switch.bathroomextractor_switch
     - switch.fishtank_switch
     - switch.officeswitch_switch
