@@ -5,8 +5,8 @@ Climate:
   icon: mdi:radiator
   entities:
     - group.climate
-    - sensor.livinroomheater_temperature
-    - sensor.izzyheater_temperature
+    #- sensor.livinroomheater_temperature
+    #- sensor.izzyheater_temperature
     # - sensor.dinningroomheater_temperature
     # - sensor.hallwayheater_temperature
     # - sensor.lucasroomheater_temperature
@@ -16,14 +16,3 @@ Climate:
     # - sensor.bathroomheater_temperature
     # - sensor.toiletroomheater_temperature
     # - sensor.bedroomheater_temperature
-    - input_number.slider1
-    - input_number.slider2
-    - input_number.slider3
-    - input_number.slider4
-    - input_number.slider5
-    - input_number.slider6
-    - input_number.slider7
-    - input_number.slider8
-    - input_number.slider9
-    - input_number.slider10
-    - input_number.slider11
