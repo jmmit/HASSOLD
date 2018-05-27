@@ -1,1 +1,6 @@
 #Lounge Controls
+
+Lounge:
+  view: yes
+  entities:
+    - light.loungelight_level
