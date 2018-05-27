@@ -1,6 +1,6 @@
 # Lights
 
-Group_Lights:
+Lights:
   view: yes
   icon: mdi:lightbulb-on
   entities:
