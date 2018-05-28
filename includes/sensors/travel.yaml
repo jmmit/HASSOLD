@@ -2,7 +2,7 @@
 
 - platform: google_travel_time
   api_key: !secret google_travel
-  origin: !secret home_pc
+  origin: device_tracker.homeassistant_mc
   destination: !secret mwork_pc
   name: To Roedean
 
