@@ -10,10 +10,10 @@
   api_key: google_travel
   origin: device_tracker.homeassistant_mc
   destination: !secret home_pc
-  name: To Home (Max)
+  name: To Home Max
 
 - platform: google_travel_time
   api_key: google_travel
   origin: device_tracker.homeassistant_sc
   destination: !secret home_pc
-  name: To Home (Sophie)
+  name: To Home Sophie
