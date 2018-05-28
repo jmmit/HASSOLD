@@ -13,9 +13,12 @@
         for:
           minutes: 5
     condition:
-      condition: time
-      after: '05:30:00'
-      before: '21:30:00'
+      - condition: time
+        after: '05:30:00'
+        before: '21:30:00'
+      - condition: state
+        entity_id: input_boolean.party_mode
+        state: 'off'
     action:
       - service: switch.turn_on
         data:
