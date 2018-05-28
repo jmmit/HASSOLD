@@ -7,3 +7,8 @@
     name: Party Mode
     initial: off
     icon: mdi:account-group
+
+  guest_mode:
+    name: Guest Mode
+    initial: off
+    icon: mdi:account-plus
