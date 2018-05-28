@@ -1,6 +1,6 @@
-######################
-# CORE CONFIGURATION #
-######################
+###########################
+# CORE HASS CONFIGURATION #
+###########################
 
 homeassistant:
   name: Home
