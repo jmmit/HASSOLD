@@ -1,2 +1,10 @@
 # Default View
 
+ default_view:
+   view: yes
+   icon: mdi:home
+   entities:
+     - alarm_control_panel.home_alarm
+     - input_boolean.party_mode
+     - input_boolean.guest_mode
+     - weather.openweathermap
