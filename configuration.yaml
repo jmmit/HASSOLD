@@ -13,6 +13,8 @@ homeassistant:
 http:
   api_password: !secret http_password
   base_url: !secret base_url
+  cors_allowed_origins:
+    - !secret cors_url
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   ip_ban_enabled: true
