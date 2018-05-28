@@ -18,7 +18,7 @@
     action:
       service: light.turn_on
       data:
-        entity_id: lightbathroomlight_level
+        entity_id: light.bathroomlight_level
         brightness: 3
         transition: 2
 
