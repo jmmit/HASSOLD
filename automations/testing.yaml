@@ -1,6 +1,6 @@
 
 # Turn fan on with light after 5 minutes
-  - alias: 'Test Lannouncer'
+  - alias: 'Test Lannouncer 1'
     hide_entity: True
     trigger:
       - platform: state
@@ -10,6 +10,35 @@
     action:
       - service: notify.HallwayLA
         data:
-          message: "The bathroom light has just turned on"
+          message: "chime"
           data:
-            method: "speak"
+            method: "alarm"
+
+  - alias: 'Test Lannouncer 2'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.loungelight_level
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "chime"
+          data:
+            method: "alarm"
+
+  - alias: 'Test Lannouncer 3'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.izzylight_level
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "chime"
+          data:
+            method: "alarm"
+
