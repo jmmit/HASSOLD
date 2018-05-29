@@ -9,4 +9,7 @@
         to: 'on'
     action:
       - service: notify.HallwayLA
-        message: "Bathroom light has turned on"
+        data:
+          message: "chime"
+          data:
+            method: "alarm"
