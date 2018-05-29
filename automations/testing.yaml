@@ -42,3 +42,60 @@
           data:
             method: "alarm"
 
+  - alias: 'Party Mode On'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: input_boolean.party_mode
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "Party Mode On"
+          data:
+            method: "speak"
+
+  - alias: 'Party Mode Off'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: input_boolean.party_mode
+        from: 'on'
+        to: 'off'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "Party Mode Off"
+          data:
+            method: "speak"
+
+
+  - alias: 'Visitor Mode On'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: input_boolean.party_mode
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "Visitor Mode On"
+          data:
+            method: "speak"
+
+  - alias: 'Party Mode'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: input_boolean.party_mode
+        from: 'on'
+        to: 'off'
+    action:
+      - service: notify.HallwayLA
+        data:
+          message: "Visitor Mode On"
+          data:
+            method: "speak"
+
