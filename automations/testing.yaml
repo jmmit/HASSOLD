@@ -10,6 +10,6 @@
     action:
       - service: notify.HallwayLA
         data:
-          message: "chime"
+          message: "The bathroom light has just turned on"
           data:
-            method: "alarm"
+            method: "speak"
