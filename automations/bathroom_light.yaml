@@ -11,7 +11,7 @@
     condition:
       - condition: time
         after: '22:30:01'
-        before: '05:00:00'
+        before: '04:30:00'
       - condition: state
         entity_id: input_boolean.party_mode
         state: 'off'
@@ -51,7 +51,7 @@
         to: 'on'
     condition:
       condition: time
-      after: '05:00:01'
+      after: '04:30:01'
       before: '07:30:00'
     action:
       - service: light.turn_on
@@ -64,7 +64,7 @@
         data:
           entity_id: light.bathroomlight_level
           brightness: 200
-          transition: 1200
+          transition: 600
     
 # Automatically turn light off after 80 minutes
   - alias: Bathroom Light Auto Off
