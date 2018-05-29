@@ -1,1 +1,12 @@
 
+# Turn fan on with light after 5 minutes
+  - alias: 'Test Lannouncer'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: light.bathroomlight_level
+        from: 'off'
+        to: 'on'
+    action:
+      - service: notify.HallwayLA
+        message: "Bathroom light has turned on"
