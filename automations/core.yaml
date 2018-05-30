@@ -26,12 +26,12 @@
           addon: core_letsencrypt
 
 # Restart HASS to prevent problems
-  - id: Restart-HA
-    alias: Restart HASS
-    trigger: 
-      - platform: homeassistant
-        event: start
-        for:
-          hours: 48
-    action:
-      - service: homeassistant.restart
+#  - id: Restart-HA
+#    alias: Restart HASS
+#    trigger: 
+#      - platform: homeassistant
+#        event: start
+#        for:
+#          hours: 48
+#    action:
+#      - service: homeassistant.restart
