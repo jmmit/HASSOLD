@@ -2,6 +2,8 @@
 
 - platform: darksky
   api_key: !secret darksky
+  forecast:
+    - 7
   monitored_conditions:
     - apparent_temperature
     - humidity
