@@ -85,11 +85,11 @@
           data:
             method: "speak"
 
-  - alias: 'Party Mode'
+  - alias: 'Visitor Mode Off'
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: input_boolean.party_mode
+        entity_id: input_boolean.visitor_mode
         from: 'on'
         to: 'off'
     action:
