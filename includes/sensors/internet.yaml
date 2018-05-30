@@ -6,11 +6,11 @@
     - download
     - upload
 
-- platform: haveibeenpwned
-  email:
-    - !secret mmv
-    - !secret mdhcd
-    - !secret mwork
-    - !secret mgoogle
-    - !secret hgoogle
-    - !secret smv
+#- platform: haveibeenpwned
+#  email:
+#    - !secret mmv
+#    - !secret mdhcd
+#    - !secret mwork
+#    - !secret mgoogle
+#    - !secret hgoogle
+#    - !secret smv
