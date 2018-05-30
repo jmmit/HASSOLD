@@ -35,11 +35,15 @@
         from: 'off'
         to: 'on'
         for:
-          minutes: 40
+          minutes: 2
     action:
-      service: switch.turn_off
-      data:
-        entity_id: switch.bathroomextractor_switch
+      - service: switch.turn_off
+        data:
+          entity_id: switch.bathroomextractor_switch
+      - service: notify.PBMax
+          data:
+            title: Extractor
+            message: Turning off after x
 
 # Turn fan off with light
   - alias: Turn fan off with light
@@ -59,6 +63,10 @@
           entity_id: switch.bathextractor_switch
       - service: input_boolean.turn_on
         entity_id: input_boolean.bathroomextractor_switch
+      - service: notify.PBMax
+          data:
+            title: Extractor
+            message: Turning off after with light
 
 # Turn the boolean on as light turns on
   - alias: Turn boolean off when light turns on
