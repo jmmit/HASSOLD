@@ -138,6 +138,8 @@ device_tracker:
     home_interval: 60
     exclude:
       - 192.168.1.250
+  - platform: bluetooth_tracker
+    track_new_devices: false
 
 ############
 # Includes #
