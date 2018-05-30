@@ -1,5 +1,6 @@
 # Core Automations relating to HASS
 
+#Alert me when HA has finished booting
   - id: HASS_Startup
     alias: HASS Startup
     initial_state: True
@@ -12,7 +13,8 @@
       data:
         title: HASSIO
         message: Home Assistant has finished booting!
-      
+
+#Renew SSL Certificate
   - id: letsencrypt-renewal
     alias: "Let's Encrypt Renewal"
     trigger:
@@ -23,4 +25,13 @@
         data:
           addon: core_letsencrypt
 
-
+# Restart HASS to prevent problems
+  - id: Restart-HA
+    alias: Restart HASS
+    trigger: 
+      - platform: homeassistant
+        event: start
+        for:
+          hours: 48
+    action:
+      - service: homeassistant.restart
