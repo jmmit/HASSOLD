@@ -64,9 +64,9 @@
       - service: input_boolean.turn_on
         entity_id: input_boolean.bathroomextractor_switch
       - service: notify.PBMax
-          data:
-            title: Extractor
-            message: Turning off after with light
+        data:
+          title: Extractor
+          message: Turning off after with light
 
 # Turn the boolean on as light turns on
   - alias: Turn boolean off when light turns on
