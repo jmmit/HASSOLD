@@ -41,9 +41,9 @@
         data:
           entity_id: switch.bathroomextractor_switch
       - service: notify.PBMax
-          data:
-            title: Extractor
-            message: Turning off after x
+        data:
+          title: Extractor
+          message: Turning off after x
 
 # Turn fan off with light
   - alias: Turn fan off with light
