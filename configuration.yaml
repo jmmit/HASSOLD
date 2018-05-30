@@ -159,3 +159,4 @@ input_boolean: !include includes/input_boolean.yaml
 #zone: !include includes/zones.yaml
 #remote: !include includes/remotes.yaml
 #camera: !include includes/cameras.yaml
+sabnzbd: !include includes/sabnzb.yaml
