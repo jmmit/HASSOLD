@@ -50,9 +50,9 @@
         from: 'off'
         to: 'on'
     condition:
-      condition: time
-      after: '04:30:01'
-      before: '07:30:00'
+      - condition: time
+        after: '04:30:01'
+        before: '07:30:00'
     action:
       - service: light.turn_on
         data:
@@ -64,7 +64,7 @@
         data:
           entity_id: light.bathroomlight_level
           brightness: 200
-          transition: 600
+          transition: 300
     
 # Automatically turn light off after 80 minutes
   - alias: Bathroom Light Auto Off
