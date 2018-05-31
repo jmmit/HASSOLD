@@ -26,8 +26,8 @@
       - service: input_boolean.turn_off
         entity_id: input_boolean.extractor_fan
         
-# Turn fan off after 40 minutes
-  - alias: 'Turn Extractor off after 40 minutes'
+# Turn fan off after 30 minutes
+  - alias: 'Turn Extractor off after 30 minutes'
     hide_entity: True
     trigger:
       - platform: state
@@ -35,15 +35,11 @@
         from: 'off'
         to: 'on'
         for:
-          minutes: 2
+          minutes: 30
     action:
       - service: switch.turn_off
         data:
           entity_id: switch.bathroomextractor_switch
-      - service: notify.PBMax
-        data:
-          title: Extractor
-          message: Turning off after x
 
 # Turn fan off with light
   - alias: Turn fan off with light
@@ -63,10 +59,6 @@
           entity_id: switch.bathroomextractor_switch
       - service: input_boolean.turn_on
         entity_id: input_boolean.bathroomextractor_switch
-      - service: notify.PBMax
-        data:
-          title: Extractor
-          message: Turning off after with light
 
 # Turn the boolean on as light turns on
   - alias: Turn boolean off when light turns on
