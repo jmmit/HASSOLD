@@ -50,9 +50,13 @@ recorder:
       - zone
       - zwave
 logger:
-  default: error
+  logs:
+    homeassistant.components.nest: debug
+    homeassistant.components.sensor.nest: debug
+    sseclient: debug
+  default: warn
 system_log:
-  max_entries: 150
+  max_entries: 500
 
 ########################
 # Z-Wave Configuration #
