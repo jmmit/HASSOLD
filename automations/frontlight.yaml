@@ -1,2 +1,36 @@
 #Front Light Control
 
+# Turn front light on when sophie arrives home after dark
+  - alias: 'Turn light on when Sophie gets home and its dark'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: device_tracker.homeassistant_sc
+        from: 'not_home'
+        to: 'home'
+      condition:
+        platform: numeric_state
+        entity_id: sensor.hallwaymultisensor_luminance
+        below: 121
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: light.fibaro_system_fgd212_dimmer_2_level_2
+          
+          
+# Turn front light on when Max arrives home after dark
+  - alias: 'Turn light on when Max gets home and its dark'
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: device_tracker.homeassistant_mc
+        from: 'not_home'
+        to: 'home'
+      condition:
+        platform: numeric_state
+        entity_id: sensor.hallwaymultisensor_luminance
+        below: 121
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: light.fibaro_system_fgd212_dimmer_2_level_2
