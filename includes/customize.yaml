@@ -10,7 +10,7 @@ light.bathroomlight_level:
   friendly_name: 'Bathroom'
 light.loungelight_level:
   friendly_name: 'Lounge'
-light.fibaro_system_fgd212_dimmer_2_level_2
+light.fibaro_system_fgd212_dimmer_2_level_2:
   friendly_name: 'Front'
   
 # SWITCHES #####################################
@@ -68,5 +68,5 @@ light.loungelight_level_2:
   hidden: true
 switch.bathroomextractor_switch_2:
   hidden: true
-light.fibaro_system_fgd212_dimmer_2_level
+light.fibaro_system_fgd212_dimmer_2_level:
   hidden: true
