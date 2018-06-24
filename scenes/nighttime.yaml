@@ -1,2 +1,9 @@
 #Night Time Scenes
 
+
+# Goodnight
+  - name: Goodnight
+    entities:
+      light.bathroomlight_level: off
+      light.loungelight_level: off
+      light.izzylight_level: off
