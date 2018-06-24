@@ -7,3 +7,5 @@
       light.bathroomlight_level: off
       light.loungelight_level: off
       light.izzylight_level: off
+      switch.fishtank_switch: off
+      switch.office_switch: off
