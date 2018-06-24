@@ -64,7 +64,7 @@
         data:
           entity_id: light.bathroomlight_level
           brightness: 200
-          transition: 300
+          transition: 60
     
 # Automatically turn light off after 80 minutes
   - alias: Bathroom Light Auto Off
