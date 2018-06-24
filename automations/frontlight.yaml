@@ -8,10 +8,10 @@
         entity_id: device_tracker.homeassistant_sc
         from: 'not_home'
         to: 'home'
-      condition:
-        platform: numeric_state
-        entity_id: sensor.hallwaymultisensor_luminance
-        below: 121
+    condition:
+      platform: numeric_state
+      entity_id: sensor.hallwaymultisensor_luminance
+      below: 121
     action:
       - service: switch.turn_on
         data:
@@ -26,10 +26,10 @@
         entity_id: device_tracker.homeassistant_mc
         from: 'not_home'
         to: 'home'
-      condition:
-        platform: numeric_state
-        entity_id: sensor.hallwaymultisensor_luminance
-        below: 121
+    condition:
+      platform: numeric_state
+      entity_id: sensor.hallwaymultisensor_luminance
+      below: 121
     action:
       - service: switch.turn_on
         data:
