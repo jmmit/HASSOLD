@@ -1,0 +1,9 @@
+# Battery Levels
+
+- platform: template
+  sensors:
+    max_battery:
+      friendly_name: Max Mobile
+      unit_of_measurement: "%"
+      value_template: '{{ states.device_tracker.Max_Mobile.attributes.battery|int }}'
+      device_class: battery
