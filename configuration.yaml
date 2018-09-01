@@ -13,8 +13,8 @@ homeassistant:
 http:
   api_password: !secret http_password
   base_url: !secret base_url
-  #ssl_certificate: !secret ssl_certificate
-  #ssl_key: !secret ssl_key
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   ip_ban_enabled: true
   login_attempts_threshold: 5
   trusted_networks:
@@ -129,9 +129,9 @@ weather:
 ###################
 
 device_tracker:
-  - platform: owntracks
+  - platform: owntracks_http
     max_gps_accuracy: 50
-    track_new_devices: false
+    track_new_devices: true
   - platform: nmap_tracker
     track_new_devices: false
     hosts: 192.168.1.0/24
@@ -140,8 +140,6 @@ device_tracker:
       - 192.168.1.250
   - platform: bluetooth_tracker
     track_new_devices: false
-  - platform: gpslogger
-    track_new_devices: true
 
 ############
 # Includes #
@@ -154,7 +152,7 @@ device_tracker:
 #group: !include_dir_merge_named includes/groups/
 notify: !include_dir_merge_list includes/notify/
 #switch: !include_dir_merge_list includes/switchs/
-#sensor: !include_dir_merge_list includes/sensors/
+sensor: !include_dir_merge_list includes/sensors/
 #script: !include_dir_merge_list includes/scripts/
 #shell_commands: !include_dir_merge_list scripts/shell/
 
