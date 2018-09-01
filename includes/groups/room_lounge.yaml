@@ -3,4 +3,4 @@
 Lounge:
   view: yes
   entities:
-    - light.loungelight_level
+    - light.lounge
