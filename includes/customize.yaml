@@ -2,52 +2,32 @@
 # Customize #
 #############
 
-# LIGHTS ######################################
-
-light.izzylight_level:
-  friendly_name: 'Izzy'
-light.bathroomlight_level:
-  friendly_name: 'Bathroom'
-light.loungelight_level:
-  friendly_name: 'Lounge'
-light.fibaro_system_fgd212_dimmer_2_level_2:
-  friendly_name: 'Front'
-  
-# SWITCHES #####################################
-
-switch.bathroomextractor_switch:
-  friendly_name: 'Extractor Fan'
-switch.fishtank_switch:
-  friendly_name: 'Fish Tank'
-switch.office_switch:
-  friendly_name: 'Office'
-  
 # GROUP ORDER #################################
 
-  group.Lights:
-    order: 1
-  group.Power:
-    order: 2
-  group.Media:
-    order: 3
-  group.Climate:
-    order: 4
-  group.Sensors:
-    order: 5
-  group.Location:
-    order: 6
-  group.Locks:
-    order: 7
-  group.Alarms:
-    order: 8
-  group.Web:
-    order: 9
-  group.Weather:
-    order: 10
-  group.Lounge:
-    order: 11
-  group.Bathroom:
-    order: 12
+#  group.Lights:
+#    order: 1
+#  group.Power:
+#    order: 2
+#  group.Media:
+#    order: 3
+#  group.Climate:
+#    order: 4
+#  group.Sensors:
+#    order: 5
+#  group.Location:
+#    order: 6
+#  group.Locks:
+#    order: 7
+#  group.Alarms:
+#    order: 8
+#  group.Web:
+#    order: 9
+#  group.Weather:
+#    order: 10
+#  group.Lounge:
+#    order: 11
+#  group.Bathroom:
+#    order: 12
   
 # DEFAULT GROUPS ###############################
 
@@ -60,13 +40,13 @@ group.all_switches:
   
 # NONE EXISTING STUFF ##########################
 
-light.izzylight_level_2:
+light.izzy_light_2:
   hidden: true
-light.bathroomlight_level_2:
-  hidden: true
-light.loungelight_level_2:
-  hidden: true
-switch.bathroomextractor_switch_2:
-  hidden: true
-light.fibaro_system_fgd212_dimmer_2_level:
-  hidden: true
+#light.bathroomlight_level_2:
+#  hidden: true
+#light.loungelight_level_2:
+#  hidden: true
+#switch.bathroomextractor_switch_2:
+#  hidden: true
+#light.fibaro_system_fgd212_dimmer_2_level:
+#  hidden: true
