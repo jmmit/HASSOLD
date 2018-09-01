@@ -3,5 +3,5 @@
 Bathroom:
   view: yes
   entities:
-    - light.bathroomlight_level
-    - switch.bathroomextractor_switch
+    - light.bathroom
+    - switch.bathroom_extractor
