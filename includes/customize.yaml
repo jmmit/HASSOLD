@@ -42,11 +42,11 @@ group.all_switches:
 
 light.izzy_light_2:
   hidden: true
-#light.bathroomlight_level_2:
-#  hidden: true
+light.bathroom_2:
+  hidden: true
 light.lounge_2:
   hidden: true
 #switch.bathroomextractor_switch_2:
 #  hidden: true
-#light.fibaro_system_fgd212_dimmer_2_level:
-#  hidden: true
+light.front_2:
+  hidden: true
