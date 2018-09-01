@@ -46,7 +46,7 @@ light.bathroom_2:
   hidden: true
 light.lounge_2:
   hidden: true
-#switch.bathroomextractor_switch_2:
-#  hidden: true
+switch.bathroomextractor_2:
+  hidden: true
 light.front_2:
   hidden: true
