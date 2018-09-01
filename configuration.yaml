@@ -140,6 +140,9 @@ device_tracker:
       - 192.168.1.250
   - platform: bluetooth_tracker
     track_new_devices: false
+device_tracker:
+  - platform: gpslogger
+    track_new_devices: true
 
 ############
 # Includes #
