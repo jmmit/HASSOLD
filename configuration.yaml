@@ -9,7 +9,7 @@ homeassistant:
   elevation: 25
   unit_system: metric
   time_zone: !secret time_zone
-  customize: !include includes/customize.yaml
+#  customize: !include includes/customize.yaml
 http:
   api_password: !secret http_password
   base_url: !secret base_url
@@ -50,10 +50,6 @@ recorder:
       - zone
       - zwave
 logger:
-  logs:
-    homeassistant.components.nest: debug
-    homeassistant.components.sensor.nest: debug
-    sseclient: debug
   default: warn
 system_log:
   max_entries: 500
@@ -150,13 +146,13 @@ device_tracker:
 ############
 
 # Direcrtories
-automation: !include_dir_merge_list automations/
-scene: !include_dir_merge_list scenes/
+#automation: !include_dir_merge_list automations/
+#scene: !include_dir_merge_list scenes/
 
-group: !include_dir_merge_named includes/groups/
+#group: !include_dir_merge_named includes/groups/
 notify: !include_dir_merge_list includes/notify/
 #switch: !include_dir_merge_list includes/switchs/
-sensor: !include_dir_merge_list includes/sensors/
+#sensor: !include_dir_merge_list includes/sensors/
 #script: !include_dir_merge_list includes/scripts/
 #shell_commands: !include_dir_merge_list scripts/shell/
 
@@ -166,4 +162,4 @@ input_boolean: !include includes/input_boolean.yaml
 #zone: !include includes/zones.yaml
 #remote: !include includes/remotes.yaml
 #camera: !include includes/cameras.yaml
-sabnzbd: !include includes/sabnzb.yaml
+#sabnzbd: !include includes/sabnzb.yaml
