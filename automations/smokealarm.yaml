@@ -39,7 +39,7 @@
           brightness: 255
       - service: homeassistant.turn_on
         data:
-          entity_id: switch.bathroomextractor_switch
+          entity_id: switch.bathroom_extractor
 
   - id: SMOKE_WARNING_Upstairs
     alias: SMOKE WARNING Upstairs
@@ -80,4 +80,4 @@
           brightness: 255
       - service: homeassistant.turn_on
         data:
-          entity_id: switch.bathroomextractor_switch
+          entity_id: switch.bathroom_extractor
