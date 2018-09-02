@@ -15,7 +15,7 @@
       - service: notify.PBSophie
         data:
           title: CO Warning
-          message: Warning! Downstairs co alarm has detected light levels of smoke.
+          message: Warning! Downstairs CO alarm has detected light levels of CO.
 
   - id: CO_ALARM_DOWNSTAIRS
     alias: CO ALARM DOWNSTAIRS
@@ -39,7 +39,7 @@
           brightness: 255
       - service: homeassistant.turn_on
         data:
-          entity_id: switch.bathroomextractor_switch
+          entity_id: switch.bathroom_extractor
 
   - id: CO_WARNING_Upstairs
     alias: CO WARNING Upstairs
@@ -80,4 +80,4 @@
           brightness: 255
       - service: homeassistant.turn_on
         data:
-          entity_id: switch.bathroomextractor_switch
+          entity_id: switch.bathroom_extractor
