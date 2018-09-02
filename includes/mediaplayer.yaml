@@ -12,17 +12,17 @@
   username: !secret kodi_user
   password: !secret kodi_pass
 
-- platform: kodi
-  host: !secret kodi_dinningroom
-  name: Dinning Room
-  username: !secret kodi_user
-  password: !secret kodi_pass
+#- platform: kodi
+#  host: !secret kodi_dinningroom
+#  name: Dinning Room
+#  username: !secret kodi_user
+#  password: !secret kodi_pass
 
-- platform: kodi
-  host: !secret kodi_kitchen
-  name: Kitchen
-  username: !secret kodi_user
-  password: !secret kodi_pass
+#- platform: kodi
+#  host: !secret kodi_kitchen
+#  name: Kitchen
+#  username: !secret kodi_user
+#  password: !secret kodi_pass
 
 - platform: webostv
   host: 192.168.1.240
