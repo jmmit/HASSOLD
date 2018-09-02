@@ -158,7 +158,7 @@ sensor: !include_dir_merge_list includes/sensors/
 
 # Single Files
 input_boolean: !include includes/input_boolean.yaml
-#media_player: !include includes/mediaplayer.yaml
+media_player: !include includes/mediaplayer.yaml
 zone: !include includes/zones.yaml
 #remote: !include includes/remotes.yaml
 #camera: !include includes/cameras.yaml
