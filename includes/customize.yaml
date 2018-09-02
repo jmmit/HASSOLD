@@ -31,8 +31,6 @@
   
 # DEFAULT GROUPS ###############################
 
-group.all_automations:
-  hidden: false
 group.all_lights:
   hidden: false
 group.all_switches:
