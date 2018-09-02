@@ -12,3 +12,4 @@ Weather:
      - sensor.dark_sky_precip
      - weather.openweathermap
      - sun.sun
+     - group.weather
