@@ -109,8 +109,6 @@
     hidden: true
   sensor.fibaro_system_fgs213_switch_power_management:
     hidden: true
-  fibaro_system_fgs213_switch_sourcenodeid:
-    hidden: true
   sensor.fibaro_system_fgd212_dimmer_2_alarm_level:
     hidden: true
   sensor.fibaro_system_fgd212_dimmer_2_alarm_level_2:
