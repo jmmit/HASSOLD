@@ -10,12 +10,12 @@
         to: 'home'
     condition:
       platform: numeric_state
-      entity_id: sensor.hallwaymultisensor_luminance
+      entity_id: sensor.lux
       below: 121
     action:
       - service: switch.turn_on
         data:
-          entity_id: light.fibaro_system_fgd212_dimmer_2_level_2
+          entity_id: light.front
           
           
 # Turn front light on when Max arrives home after dark
@@ -28,9 +28,9 @@
         to: 'home'
     condition:
       platform: numeric_state
-      entity_id: sensor.hallwaymultisensor_luminance
+      entity_id: sensor.lux
       below: 121
     action:
       - service: switch.turn_on
         data:
-          entity_id: light.fibaro_system_fgd212_dimmer_2_level_2
+          entity_id: light.front
