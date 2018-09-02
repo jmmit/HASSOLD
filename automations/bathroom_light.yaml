@@ -5,7 +5,7 @@
     hide_entity: False
     trigger:
       - platform: state
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         from: 'off'
         to: 'on'
     condition:
@@ -18,16 +18,31 @@
     action:
       service: light.turn_on
       data:
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         brightness: 3
-        transition: 2
+        transition: 1
+        
+# Turn light on at night to set correct level
+  - alias: Turn light on to set night time level
+    hide_entity: false
+    trigger:
+      - platform: time
+        at: '23:00:00'
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: light.bathroom
+      - delay: '00:00:05'
+      - service: light.turn_off
+        data:
+          entity_id: light.bathroom
 
 # Light full brightness during the day
   - alias: Bathroom Light Day Time
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         from: 'off'
         to: 'on'
     condition:
@@ -37,7 +52,7 @@
     action:
       service: light.turn_on
       data:
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         brightness: 200
         transition: 3
  
@@ -46,7 +61,7 @@
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         from: 'off'
         to: 'on'
     condition:
@@ -56,27 +71,27 @@
     action:
       - service: light.turn_on
         data:
-          entity_id: light.bathroomlight_level
+          entity_id: light.bathroom
           brightness: 15
-          transition: 3
-      - delay: '00:10:00'
+          transition: 4
+      - delay: '00:00:05'
       - service: light.turn_on
         data:
-          entity_id: light.bathroomlight_level
-          brightness: 200
+          entity_id: light.bathroom
+          brightness: 240
           transition: 60
     
-# Automatically turn light off after 80 minutes
+# Automatically turn light off after 60 minutes
   - alias: Bathroom Light Auto Off
     hide_entity: True
     trigger:
       - platform: state
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
         from: 'off'
         to: 'on'
         for:
-          minutes: 80
+          minutes: 60
     action:
       service: light.turn_off
       data:
-        entity_id: light.bathroomlight_level
+        entity_id: light.bathroom
