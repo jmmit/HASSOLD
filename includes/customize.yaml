@@ -50,3 +50,82 @@ switch.bathroom_extractor_2:
   hidden: true
 light.front_2:
   hidden: true
+
+# STUFF THAT I DONT NEED TO SEE #################
+
+sensor.fibaro_system_fgd212_dimmer_2_exporting_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_exporting
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_exporting_4
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_exporting_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_heat
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_heat_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_heat_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_heat_4
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_management
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_management_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_management_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_management_4
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_7
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_power_6
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_sourcenodeid_4
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_system
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_system_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_system_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_system_4
+  hidden: true
+sensor.fibaro_system_fgs213_switch_alarm_level
+  hidden: true
+sensor.fibaro_system_fgs213_switch_alarm_type
+  hidden: true
+sensor.fibaro_system_fgs213_switch_exporting
+  hidden: true
+sensor.fibaro_system_fgs213_switch_heat
+  hidden: true
+sensor.fibaro_system_fgs213_switch_power_management
+  hidden: true
+fibaro_system_fgs213_switch_sourcenodeid
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_level_4
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type_2
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type_3
+  hidden: true
+sensor.fibaro_system_fgd212_dimmer_2_alarm_type_4
+  hidden: true
