@@ -4,30 +4,30 @@
 
 # GROUP ORDER #################################
 
-#  group.Lights:
-#    order: 1
-#  group.Power:
-#    order: 2
-#  group.Media:
-#    order: 3
-#  group.Climate:
-#    order: 4
-#  group.Sensors:
-#    order: 5
-#  group.Location:
-#    order: 6
-#  group.Locks:
-#    order: 7
-#  group.Alarms:
-#    order: 8
-#  group.Web:
-#    order: 9
-#  group.Weather:
-#    order: 10
-#  group.Lounge:
-#    order: 11
-#  group.Bathroom:
-#    order: 12
+  group.Lights:
+    order: 3
+  group.Power:
+    order: 4
+  group.Media:
+    order: 5
+  group.Climate:
+    order: 6
+  group.Sensors:
+    order: 7
+  group.Location:
+    order: 8
+  group.Locks:
+    order: 9
+  group.Alarms:
+    order: 10
+  group.Web:
+    order: 11
+  group.Weather:
+    order: 12
+  group.Lounge:
+    order: 1
+  group.Bathroom:
+    order: 2
   
 # DEFAULT GROUPS ###############################
 
