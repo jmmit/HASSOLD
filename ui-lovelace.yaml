@@ -78,7 +78,7 @@ views:
   - title: Office
     id: office
     cards:
-      - type: entities:
+      - type: entities
         entities:
           - switch.office
           
