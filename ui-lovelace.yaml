@@ -113,7 +113,7 @@ views:
         unit_of_measurement: '%'
         min: 0
         max: 100
-        severity
+        severity:
           red: 75
           yellow: 50
           green: 0
