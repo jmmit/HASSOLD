@@ -6,6 +6,6 @@
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
-      arg: /h
+      arg: /
     - type: memory_use_percent
     - type: processor_use
