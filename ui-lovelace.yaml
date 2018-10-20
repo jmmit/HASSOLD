@@ -32,9 +32,10 @@ views:
         unit_of_measurement: lux
         min: 0
         max: 1000
-        red: 20
-        green: 400
-        yellow: 50
+        severity:
+          red: 20
+          green: 400
+          yellow: 50
       - type: weather-forecast
         entity: weather.openweathermap
       
@@ -93,9 +94,10 @@ views:
         unit_of_measurement: min
         min: 0
         max: 80
-        red: 60
-        green: 0
-        yellow: 50
+        severity:
+          red: 60
+          green: 0
+          yellow: 50
       - type: entities
         entities:
           - device_tracker.homeassistant_mc
@@ -111,36 +113,51 @@ views:
         unit_of_measurement: '%'
         min: 0
         max: 100
-        red: 75
-        yellow: 50
-        green: 0
+        severity
+          red: 75
+          yellow: 50
+          green: 0
       - type: gauge
         entity: sensor.disk_use_percent_
         title: Disk
         unit_of_measurement: '%'
         min: 0
         max: 100
-        red: 75
-        yellow: 50
-        green: 0
+        severity:
+          red: 75
+          yellow: 50
+          green: 0
       - type: gauge
         entity: sensor.memory_use_percent
         title: RAM
         unit_of_measurement: '%'
         min: 0
         max: 100
-        red: 75
-        yellow: 50
-        green: 0
+        severity
+          red: 75
+          yellow: 50
+          green: 0
       - type: gauge
         entity: sensor.speedtest_download
         title: Download
         unit_of_measurement: 'Mbps'
+        severity:
+          red: 0
+          yellow: 35
+          green: 40
       - type: gauge
         entity: sensor.speedtest_ping
         title: Ping
         unit_of_measurement: 'ms'
+        severity:
+          red: 100
+          yellow: 30
+          green: 0
       - type: gauge
         entity: sensor.speedtest_upload
         title: Upload
         unit_of_measurement: 'Mbps'
+        severity:
+          red: 0
+          yellow: 10
+          green: 15
