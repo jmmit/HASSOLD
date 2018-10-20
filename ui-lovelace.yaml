@@ -41,7 +41,7 @@ views:
   - title: Outside
     id: outside
     cards:
-      - type: entities:
+      - type: entities
         entities:
           - light.front
 
