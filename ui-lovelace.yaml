@@ -24,7 +24,7 @@ views:
         entities:
           - device_tracker.homeassistant_mc
           - device_tracker.homeassistant_sc
-      - type: entities:
+      - type: entities
         entities:
           - input_boolean.party_mode
           - input_boolean.guest_mode
