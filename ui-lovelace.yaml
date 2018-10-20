@@ -90,10 +90,18 @@ views:
     cards:
       - type: gauge
         entity: sensor.to_roedean
-        title: Mins
+        title: To Roedean
         unit_of_measurement: min
         min: 0
         max: 80
+        severity:
+          red: 60
+          green: 0
+          yellow: 50
+      - type: gauge
+        entity: sensor.to_home_max
+        title: To Home
+        unit_of_measurement: min
         severity:
           red: 60
           green: 0
