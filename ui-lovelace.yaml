@@ -1,0 +1,52 @@
+title: Carpenters Home
+
+background: center / cover no-repeat url("/lovelace/background.jpg") fixed
+
+views:
+
+  - title: Home
+    id: home
+    background: center / cover no-repeat url("/lovelace/background.jpg") fixed
+    cards:
+      - type: entity-filter
+        entities:
+          - sensor.downstairs_nest_protect_smoke_status
+          - sensor.upstairs_nest_protect_smoke_status
+          - sensor.upstairs_nest_protect_co_status
+          - sensor.downstairs_nest_protect_co_status
+          - sensor.upstairs_nest_protect_battery_health
+          - sensor.downstairs_nest_protect_battery_health
+        state_filter:
+          - 'Warning'
+          - 'Emergency'
+          - 'Replace'
+      - type: entities
+        entities:
+          - device_tracker.homeassistant_mc
+          - device_tracker.homeassistant_sc
+      - type: gauge
+        entity: sensor.lux
+        title: Light
+        unit_of_measurement: lux
+        min: 0
+        max: 1000
+        red: 20
+        green: 400
+        yellow: 50
+      - type: weather-forecast
+        entity: weather.openweathermap
+
+
+  - title: Lounge
+    id: lounge
+    background: center / cover no-repeat url("/lovelace/background.jpg") fixed
+    cards:
+      - type: entities
+        entities:
+        -  light.lounge
+      - type: entities
+        entities:
+          - entity: media_player.lounge
+            name: Media Center
+          - entity: configurator.lounge_tv
+            name: Lounge TV
