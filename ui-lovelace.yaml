@@ -83,3 +83,54 @@ views:
         entities:
           - switch.office
           
+  - icon: mdi:crosshairs-gps
+    title: Travel
+    id: travel
+    cards:
+      - type: gauge
+        entity: sensor.to_roedean
+        title: Mins
+        unit_of_measurement: min
+        min: 0
+        max: 80
+        red: 60
+        green: 0
+        yellow: 50
+      - type: entities
+        entities:
+          - device_tracker.homeassistant_mc
+          - device_tracker.homeassistant_sc
+
+  - icon: mdi:server-minus
+    title: Home Assistant
+    id: homeassistant
+    cards:
+      - type: guage
+        entity: sensor.cpu_usage
+        title: CPU
+        unit_of_measurement: %
+        min: 0
+        max: 100
+        red: 75
+        yellow: 50
+        green: 0
+      - type: guage
+        entity: sensor.disk_use_percent
+        title: Disk
+        unit_of_measurement: %
+        min: 0
+        max: 100
+        red: 75
+        yellow: 50
+        green: 0
+      - type: guage
+        entity: sensor.memory_use_percent
+        title: RAM
+        unit_of_measurement: %
+        min: 0
+        max: 100
+        red: 75
+        yellow: 50
+        green: 0
+  
+         
