@@ -24,6 +24,8 @@ views:
         entities:
           - device_tracker.homeassistant_mc
           - device_tracker.homeassistant_sc
+      - type: alarm-panel
+        entity: alarm_control_panel.home_alarm
       - type: gauge
         entity: sensor.lux
         title: Light
@@ -33,11 +35,15 @@ views:
         red: 20
         green: 400
         yellow: 50
-      - type: alarm-panel
-        entity: alarm_control_panel.home_alarm
       - type: weather-forecast
         entity: weather.openweathermap
-
+      
+  - title: Outside
+    id: outside
+    cards:
+      - type: entities:
+        entities:
+          - light.front
 
   - title: Lounge
     id: lounge
@@ -45,10 +51,34 @@ views:
     cards:
       - type: entities
         entities:
-        -  light.lounge
+          - light.lounge
       - type: entities
         entities:
           - entity: media_player.lounge_kodi
             name: Lounge Media Center
           - entity: media_player.lounge_tv
             name: Lounge TV
+
+  - title: Bathroom
+    id: bathroom
+    cards:
+      - type: entities
+        entities:
+          - light.bathroom
+          - switch.extractor_fan
+
+  - title: Izzy
+    id: izzy
+    cards:
+      - type: entities
+        entities:
+          - light.izzy_light
+          - switch.fish_tank
+          
+  - title: Office
+    id: office
+    cards:
+      - type: entities:
+        entities:
+          - switch.office
+          
