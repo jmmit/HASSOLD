@@ -33,6 +33,8 @@ views:
         red: 20
         green: 400
         yellow: 50
+      - type: alarm-panel
+        entity: alarm_control_panel.home_alarm
       - type: weather-forecast
         entity: weather.openweathermap
 
@@ -46,7 +48,7 @@ views:
         -  light.lounge
       - type: entities
         entities:
-          - entity: media_player.lounge
-            name: Media Center
+          - entity: media_player.lounge_kodi
+            name: Lounge Media Center
           - entity: media_player.lounge_tv
             name: Lounge TV
