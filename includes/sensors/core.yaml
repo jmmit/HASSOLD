@@ -2,3 +2,10 @@
 
 - platform: cert_expiry
   host: !secret base_url
+  
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /h
+    - type: memory_use_percent
+    - type: processor_use
