@@ -132,5 +132,9 @@ views:
         red: 75
         yellow: 50
         green: 0
-  
-         
+      - type: entities
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_ping
+          - sensor.speedtest_upload
+          - sensor.ssl_certificate_expiry
