@@ -7,13 +7,13 @@
   name: To Roedean
 
 - platform: google_travel_time
-  api_key: google_travel
+  api_key: !secret google_travel
   origin: device_tracker.homeassistant_mc
   destination: !secret home_pc
   name: to_home_max
 
 - platform: google_travel_time
-  api_key: google_travel
+  api_key: !secret google_travel
   origin: device_tracker.homeassistant_sc
   destination: !secret home_pc
   name: to_home_sophie
