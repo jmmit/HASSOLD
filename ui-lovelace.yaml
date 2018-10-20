@@ -106,7 +106,7 @@ views:
     id: homeassistant
     cards:
       - type: gauge
-        entity: sensor.cpu_usage
+        entity: sensor.processor_use
         title: CPU
         unit_of_measurement: '%'
         min: 0
