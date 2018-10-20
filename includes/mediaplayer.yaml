@@ -33,10 +33,11 @@
       mac: 7C:1C:4E:03:A1:49
   customize:
     sources:
-      - livetv
-      - youtube
-      - MediaCentre
-      - netflix
+      - Livetv
+      - Youtube
+      - Kodi
+      - DVD
+      - Netflix
 
 - platform: samsungtv
   host: 192.168.1.241
