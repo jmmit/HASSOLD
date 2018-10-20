@@ -100,7 +100,15 @@ views:
           yellow: 50
       - type: gauge
         entity: sensor.to_home_max
-        title: To Home
+        title: To Home (Max)
+        unit_of_measurement: min
+        severity:
+          red: 60
+          green: 0
+          yellow: 50
+      - type: gauge
+        entity: sensor.to_home_sophie
+        title: To Home (Sophie)
         unit_of_measurement: min
         severity:
           red: 60
