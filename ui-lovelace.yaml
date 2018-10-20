@@ -108,7 +108,7 @@ views:
       - type: guage
         entity: sensor.cpu_usage
         title: CPU
-        unit_of_measurement: %
+        unit_of_measurement: '%'
         min: 0
         max: 100
         red: 75
@@ -117,7 +117,7 @@ views:
       - type: guage
         entity: sensor.disk_use_percent
         title: Disk
-        unit_of_measurement: %
+        unit_of_measurement: '%'
         min: 0
         max: 100
         red: 75
@@ -126,7 +126,7 @@ views:
       - type: guage
         entity: sensor.memory_use_percent
         title: RAM
-        unit_of_measurement: %
+        unit_of_measurement: '%'
         min: 0
         max: 100
         red: 75
