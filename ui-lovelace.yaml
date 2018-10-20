@@ -48,5 +48,5 @@ views:
         entities:
           - entity: media_player.lounge
             name: Media Center
-          - entity: configurator.lounge_tv
+          - entity: media_player.lounge_tv
             name: Lounge TV
