@@ -65,7 +65,7 @@ views:
       - type: entities
         entities:
           - light.bathroom
-          - switch.extractor_fan
+          - switch.bathroom_extractor
 
   - title: Izzy
     id: izzy
