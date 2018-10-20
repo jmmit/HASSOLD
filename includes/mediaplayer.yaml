@@ -34,10 +34,10 @@
   customize:
     sources:
       - Livetv
-      - Youtube
-      - Kodi
-      - DVD
-      - Netflix
+      - youtube
+      - kodi
+      - dvd
+      - netflix
 
 - platform: samsungtv
   host: 192.168.1.241
