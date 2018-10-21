@@ -140,6 +140,22 @@ device_tracker:
       - 192.168.1.250
   - platform: bluetooth_tracker
     track_new_devices: false
+    
+#############
+# Proximity #
+#############
+
+proximity:
+  home: 
+    ignored_zones:
+      - !secret mwork
+      - !secret swork
+      - Wales
+    devices:
+      - device_tracker.homeassistant_mc
+      - device_tracker.homeassistant_sc
+    tolerance: 50
+    unit_of_measurement: mi
 
 ############
 # Includes #
