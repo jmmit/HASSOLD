@@ -26,7 +26,13 @@ views:
           - input_boolean.guest_mode
       - type: alarm-panel
         entity: alarm_control_panel.home_alarm
-      - type: gauge
+      - type: weather-forecast
+        entity: weather.openweathermap
+      
+  - title: Outside
+    id: outside
+    cards:
+     - type: gauge
         entity: sensor.lux
         title: Light
         unit_of_measurement: lux
@@ -36,12 +42,6 @@ views:
           red: 20
           green: 400
           yellow: 50
-      - type: weather-forecast
-        entity: weather.openweathermap
-      
-  - title: Outside
-    id: outside
-    cards:
       - type: entities
         entities:
           - light.front
