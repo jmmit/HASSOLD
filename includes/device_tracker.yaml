@@ -18,3 +18,7 @@ homeassistant_sc:
   track: true
   vendor:
 
+device_tracker:
+  - platform: tile
+    username: !secret tile_user
+    password: !secret tile_pwd
