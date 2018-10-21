@@ -42,7 +42,7 @@ history:
       - zwave
 recorder:
   purge_interval: 1
-  purge_keep_days: 1
+  purge_keep_days: 30
   exclude:
     domains:
       - automation
