@@ -74,7 +74,7 @@ views:
     cards:
       - type: entities
         entities:
-          - light.izzy_light
+          - light.izzy
           - switch.fish_tank
           
   - title: Office
