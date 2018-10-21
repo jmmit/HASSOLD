@@ -119,7 +119,7 @@ views:
           - device_tracker.homeassistant_mc
           - device_tracker.homeassistant_sc
 
-  - icon: mdi:server-minus
+  - icon: mdi:server-network
     title: Home Assistant
     id: homeassistant
     cards:
