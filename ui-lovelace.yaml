@@ -32,20 +32,20 @@ views:
   - title: Outside
     id: outside
     cards:
-     - type: gauge
-       entity: sensor.lux
-       title: Light
-       unit_of_measurement: lux
-       min: 0
-       max: 1000
-       severity:
-         red: 20
-         green: 400
-         yellow: 50
-      - type: entities
-        entities:
-          - light.front
-          - lock.gate
+      - type: gauge
+        entity: sensor.lux
+        title: Light
+        unit_of_measurement: lux
+        min: 0
+        max: 1000
+        severity:
+          red: 20
+          green: 400
+          yellow: 50
+       - type: entities
+         entities:
+           - light.front
+           - lock.gate
 
   - title: Lounge
     id: lounge
