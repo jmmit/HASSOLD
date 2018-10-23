@@ -29,7 +29,7 @@ config:
 discovery:
 conversation:
 logbook:
-
+python_script:
 ####################################
 # Logging and Histoy Configuration #
 ####################################
