@@ -9,4 +9,8 @@
   host: !secret mediaserver
   api_key: !secret radarrapi
   days: 7
-  
+   
+ - platform: nzbget
+   host: !secret mediaserver
+   username: !secret nzbgetuser
+   password: !secret nzbgetpass
