@@ -1,0 +1,12 @@
+#Media Server
+
+- platform: sonarr
+  host: !secret mediaserver
+  api_key: !secret sonarrapi
+  days: 7
+  
+- platform: radarr
+  host: !secret mediaserver
+  api_key: !secret radarrapi
+  days: 7
+  
