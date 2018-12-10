@@ -1,16 +1,16 @@
 # Media Players
+#
+#- platform: kodi
+#  host: !secret kodi_lounge
+#  name: Lounge_Kodi
+#  username: !secret kodi_user
+#  password: !secret kodi_pass
 
-- platform: kodi
-  host: !secret kodi_lounge
-  name: Lounge_Kodi
-  username: !secret kodi_user
-  password: !secret kodi_pass
-
-- platform: kodi
-  host: !secret kodi_bedroom
-  name: Bedroom_Kodi
-  username: !secret kodi_user
-  password: !secret kodi_pass
+#- platform: kodi
+#  host: !secret kodi_bedroom
+#  name: Bedroom_Kodi
+#  username: !secret kodi_user
+#  password: !secret kodi_pass
 
 #- platform: kodi
 #  host: !secret kodi_dinningroom
