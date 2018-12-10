@@ -129,7 +129,7 @@ weather:
 ###################
 
 device_tracker:
-  - platform: owntracks_http
+  - platform: owntracks
     max_gps_accuracy: 50
     track_new_devices: true
   - platform: nmap_tracker
