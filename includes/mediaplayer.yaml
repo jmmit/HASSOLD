@@ -44,7 +44,7 @@
   Name: Dinning_TV
   mac: 00:00:00:00:00:00
   
-- platform: squeezebox
-  host: 192.168.1.251
-  username: !secret lms_user
-  password: !secret lms_pass
+#- platform: squeezebox
+#  host: 192.168.1.251
+#  username: !secret lms_user
+#  password: !secret lms_pass
