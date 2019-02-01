@@ -9,14 +9,14 @@ homeassistant_mc:
   track: true
   vendor:
 
-homeassistant_sc:
-  hide_if_away: false
-  icon:
-  mac: C0:EE:FB:F6:01:38
-  name: Sophie
-  picture:
-  track: true
-  vendor:
+#homeassistant_sc:
+#  hide_if_away: false
+#  icon:
+#  mac: C0:EE:FB:F6:01:38
+#  name: Sophie
+#  picture:
+#  track: true
+#  vendor:
 
 device_tracker:
   - platform: tile
