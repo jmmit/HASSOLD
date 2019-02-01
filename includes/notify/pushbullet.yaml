@@ -1,5 +1,5 @@
 #Pushbullet Notifications
-  - name: PBMax
+  - name: pushbullet
     platform: pushbullet
     api_key: !secret pbmax_api
 
