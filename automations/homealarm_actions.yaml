@@ -18,11 +18,7 @@
         entity_id: alarm_control_panel.home_alarm
         data:
           code: !secret alarm_code
-      - service: notify.PBMax
-        data:
-          title: House Alarm
-          message: The alarm has been armed
-      - service: notify.PBSophie
+      - service: notify.pushbullet
         data:
           title: House Alarm
           message: The alarm has been armed
@@ -53,14 +49,11 @@
         entity_id: alarm_control_panel.home_alarm
         data:
           code: !secret alarm_code
-      - service: notify.PBMax
+      - service: notify.pushbullet
         data:
           title: House Alarm
           message: The alarm has been disarmed
-      - service: notify.PBSophie
-        data:
-          title: House Alarm
-          message: The alarm has been disarmed
+          
  #     - service: climate.set_temperature
  #       data:
  #         entity_id: climate.danfoss_devolo_home_control_radiator_thermostat_heating_1_2
