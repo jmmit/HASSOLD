@@ -1,8 +1,7 @@
 #Pushbullet Notifications
-
-#  - name: PBMax
-#    platform: pushbullet
-#    api_key: !secret pbmax_api#
+  - name: PBMax
+    platform: pushbullet
+    api_key: !secret pbmax_api
 
 #  - name: PBSophie
 #    platform: pushbullet
