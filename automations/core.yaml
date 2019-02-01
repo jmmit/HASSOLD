@@ -9,7 +9,7 @@
       - platform: homeassistant
         event: start
     action:
-      service: notify.PBMax
+      service: notify.pushbullet
       data:
         title: HASSIO
         message: Home Assistant has finished booting!
