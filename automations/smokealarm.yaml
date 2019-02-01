@@ -12,10 +12,6 @@
         data:
           title: Smoke Warning
           message: Warning! Downstairs smoke alarm has detected light levels of smoke.
-      - service: notify.PBSophie
-        data:
-          title: Smoke Warning
-          message: Warning! Downstairs smoke alarm has detected light levels of smoke.
       - service: tts.google_say
         entity_id: media_player.living_room_speaker
         data:
@@ -33,11 +29,6 @@
         data:
           title: SMOKE ALARM
           message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
-      - service: notify.PBSophie
-        data:
-          title: SMOKE ALARM
-          message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
-      - service: light.turn_on
         data:
           entity_id: group.all_lights
           brightness: 255
@@ -61,10 +52,6 @@
         data:
           title: Smoke Warning
           message: Warning! Upstairs smoke alarm has detected light levels of smoke.
-      - service: notify.PBSophie
-        data:
-          title: Smoke Warning
-          message: Warning! Upstairs smoke alarm has detected light levels of smoke.
       - service: tts.google_say
         entity_id: media_player.living_room_speaker
         data:
@@ -79,10 +66,6 @@
         to: 'Emergency'
     action:
       - service: notify.pushbullet
-        data:
-          title: SMOKE ALARM
-          message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
-      - service: notify.PBSophie
         data:
           title: SMOKE ALARM
           message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
