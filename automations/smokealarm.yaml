@@ -8,7 +8,7 @@
         entity_id: sensor.downstairs_nest_protect_smoke_status
         to: 'Warning'
     action:
-      - service: notify.PBMax
+      - service: notify.pushbullet
         data:
           title: Smoke Warning
           message: Warning! Downstairs smoke alarm has detected light levels of smoke.
@@ -29,7 +29,7 @@
         entity_id: sensor.downstairs_nest_protect_smoke_status
         to: 'Emergency'
     action: 
-      - service: notify.PBMax
+      - service: notify.pushbullet
         data:
           title: SMOKE ALARM
           message: EMERGENCY! THERE IS SMOKE DOWNSTAIRS!
@@ -57,7 +57,7 @@
         entity_id: sensor.Upstairs_nest_protect_smoke_status
         to: 'Warning'
     action:
-      - service: notify.PBMax
+      - service: notify.pushbullet
         data:
           title: Smoke Warning
           message: Warning! Upstairs smoke alarm has detected light levels of smoke.
@@ -78,7 +78,7 @@
         entity_id: sensor.Upstairs_nest_protect_smoke_status
         to: 'Emergency'
     action:
-      - service: notify.PBMax
+      - service: notify.pushbullet
         data:
           title: SMOKE ALARM
           message: EMERGENCY! THERE IS SMOKE UPSTAIRS!
