@@ -8,11 +8,7 @@
         entity_id: sensor.downstairs_nest_protect_co_status
         to: 'Warning'
     action:
-      - service: notify.PBMax
-        data:
-          title: CO Warning
-          message: Warning! Downstairs CO alarm has detected light levels of CO.
-      - service: notify.PBSophie
+      - service: notify.pushbullet
         data:
           title: CO Warning
           message: Warning! Downstairs CO alarm has detected light levels of CO.
@@ -25,11 +21,7 @@
         entity_id: sensor.downstairs_nest_protect_co_status
         to: 'Emergency'
     action: 
-      - service: notify.PBMax
-        data:
-          title: CO ALARM
-          message: EMERGENCY! THERE IS CO DOWNSTAIRS!
-      - service: notify.PBSophie
+      - service: notify.pushbullet
         data:
           title: CO ALARM
           message: EMERGENCY! THERE IS CO DOWNSTAIRS!
@@ -49,11 +41,7 @@
         entity_id: sensor.Upstairs_nest_protect_co_status
         to: 'Warning'
     action:
-      - service: notify.PBMax
-        data:
-          title: CO Warning
-          message: Warning! Upstairs CO alarm has detected light levels of CO.
-      - service: notify.PBSophie
+      - service: notify.pushbullet
         data:
           title: CO Warning
           message: Warning! Upstairs CO alarm has detected light levels of CO.
@@ -66,11 +54,7 @@
         entity_id: sensor.Upstairs_nest_protect_co_status
         to: 'Emergency'
     action:
-      - service: notify.PBMax
-        data:
-          title: CO ALARM
-          message: EMERGENCY! THERE IS CO UPSTAIRS!
-      - service: notify.PBSophie
+      - service: notify.pushbullet
         data:
           title: CO ALARM
           message: EMERGENCY! THERE IS CO UPSTAIRS!
