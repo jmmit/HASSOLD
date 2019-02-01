@@ -80,10 +80,10 @@ tts:
 #######################
 # MQTTT Configuration #
 #######################
-#mqtt:
-#  broker: 192.168.1.250
-#  username: !secret mqttt_user
-#  password: !secret http_password
+mqtt:
+  broker: 192.168.1.250
+  username: !secret mqttt_user
+  password: !secret http_password
 
 ######################
 # Nest Configuration #
